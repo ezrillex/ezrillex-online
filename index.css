@@ -1,0 +1,21 @@
+
+
+
+#ConstruccionMensaje{
+    font-family: 'Fredoka One', cursive;
+    margin-top: 0;
+}
+
+#BloqueConstruccion{
+    margin: auto;
+    text-align: center;
+    position: relative;
+}
+
+#DefaultGif{
+    margin-bottom: 0;
+}
+
+#GifYay{
+    margin-top: 10px;
+}
