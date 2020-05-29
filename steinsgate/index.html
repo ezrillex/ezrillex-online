@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+    <title>Steins;Gate</title>
+    <link rel="shortcut icon" href="../images/favicon.png" > <!--el favicon tiene que llamarse shortcut icon-->
+    <!--antes de la style sheet porque tiene que cargar el recurso antes-->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="steins_gate.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="steins_gate.js"></script>
+    <meta name="robots" content="noindex"> <!--Se supone esto bloquea que la pagina no sea indexada-->
+    <meta property="og:title" content="Steins;Gate">
+    <meta property="og:type" content="video.tv_show">
+    <meta property="og:description" content="La historia de Steins;Gate trata acerca de un grupo de amigos que modificaron su microondas conviertiendolo en un dispositivo que puede mandar mensajes de texto al pasado. Mientras realizan diversos experimentos, una organizacion llamada SERN, que ha estado realizando su propia investigacion sobre viajes en el tiempo, los localiza y ahora los personajes deben buscar una manera de evitar ser capturados por ellos.">
+    <meta property="og:image" content="https://ezrillex.online/steins_gate/poster.jpg">
+    <meta property="og:url" content="https://ezrillex.online/steins_gate/index.html">
+</head>
+
+<body>
+    <div id="ContenedorTextos">
+        <h1 id="Titulo">Steins;Gate</h1>
+        <br>
+        <h4 id="EpisodioNumero">Episodio 1</h4>
+        <br>
+        <button id="bAnterior" type="button" onclick="updateEpisode(-1)">Anterior</button>
+        <button id="bSiguiente" type="button" onclick="updateEpisode(1)">Siguiente</button>
+        <br>
+    </div>
+
+    <video id="VideoPlayer" controls autoplay>
+        <source id="VideoSource" src="" type="video/mp4">
+    </video>
+    <script>
+        updateEpisode(0);
+        document.getElementById("VideoPlayer").addEventListener('ended', episodioTermino,false);
+    </script> <!--LLama esto solo una vez?-->
+</body>
+

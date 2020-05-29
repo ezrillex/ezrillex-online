@@ -12,7 +12,7 @@ var eps = ["https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=A03A89
 "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=A03A8966D3E08B51%21162240&authkey=AGy9WkdclfK9bsU",
 "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=A03A8966D3E08B51%21162236&authkey=ACDlGOMenFowJ64"
 ]
-// todo clear chache and how do I check if playback is idle because the cache is corrupted
+// todo clear cache and how do I check if playback is idle because the cache is corrupted
 
 function updateEpisodio(episode) {
 
@@ -23,7 +23,7 @@ function updateEpisodio(episode) {
         currentEp = parseInt(url.searchParams.get('episodio')); // como side effect ahora esto guarda el current episode, y lo lee de nuevo de la url cuando cambia de episodio
     }
 
-    if(currentEp + episode > 0 & currentEp + episode <= 12){
+    if(currentEp + episode > 0 && currentEp + episode <= eps.length){
         currentEp += episode;
 
         var vid = document.getElementById("VideoSource");
@@ -39,7 +39,7 @@ function updateEpisodio(episode) {
         document.getElementById("bAnterior").style.visibility = "visible";
     }
 
-    if(currentEp < 12){ // menor a doce porque si es doce debe ocultar el boton
+    if(currentEp < eps.length){ // menor a doce porque si es doce debe ocultar el boton
         document.getElementById("bSiguiente").style.visibility = "visible";
     }
     else{
@@ -47,14 +47,12 @@ function updateEpisodio(episode) {
     }
 
     document.getElementById("EpisodioNumero").innerHTML = "Episodio " + (currentEp); // update ep number
+
     // guardar el episodio en la url
-    //url.searchParams.set("episodio", currentEp.toString());
-    //window.location.href = url.href;
-    //window.location.re
-    //window.location.search = "episodio=" + currentEp.toString();    
     window.history.pushState(null, null, '?episodio=' + currentEp.toString());
 }
 
+// auto plays the next episode
 function episodioTermino(e){
     updateEpisodio(1);
 }

@@ -1,0 +1,35 @@
+body{
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+button{
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+video{
+    width: 100%;
+    height: auto;
+}
+
+/* De entrada dejarlo oculto, sera hecho visible por javascript*/
+#bAnterior{
+    visibility: hidden; 
+}
+
+#ContenedorTextos{
+    margin: auto;
+    text-align: center;
+}
+
+#VideoPlayer{
+    margin-top: 0.5cm;
+}
+
+#Titulo{
+    margin-bottom: 0;
+}
+
+#EpisodioNumero{
+    margin-top: 0;
+    margin-bottom: 0;
+}

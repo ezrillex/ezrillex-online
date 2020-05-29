@@ -2,7 +2,7 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="c6d7a6c7-c079-490b-9ade-75d805b954f5" name="ezrillex.online ftp" url="http://bbass.info">
+      <webServer id="c6d7a6c7-c079-490b-9ade-75d805b954f5" name="ezrillex.online ftp" url="https://ezrillex.online">
         <fileTransfer host="bbass.info" port="21">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
