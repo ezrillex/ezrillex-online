@@ -2,13 +2,23 @@
 
 // todo script to change between player sizes depending on screen size (mobile vs pc)
 
-function updateEpisode(episode) {
-    console.log(currentEp)
-    // conseguir el episodio de la url si hay uno.
-    var url = new URL(window.location.href) ;
 
-    if(url.searchParams.get('index') != null){
-        currentEp = parseInt(url.searchParams.get('index')); // como side effect ahora esto guarda el current episode, y lo lee de nuevo de la url cuando cambia de episodio
+var currentEp = 0;
+
+function updateEpisode(episode) {
+    //Cookies.set('lastEpisode','value', {expires: 365});
+    // conseguir el episodio de la url si hay uno.
+    //var url = new URL(window.location.href) ;
+
+    // get episode from cookie if there is one
+    var lastEp = Cookies.get('lastEpisode');
+    console.log(lastEp);
+
+    //if(url.searchParams.get('index') != null){
+    //    currentEp = parseInt(url.searchParams.get('index')); // como side effect ahora esto guarda el current episode, y lo lee de nuevo de la url cuando cambia de episodio
+    //}
+    if(lastEp !== undefined){
+        currentEp = parseInt(lastEp);
     }
 
     if(currentEp + episode >= 0 && currentEp + episode < eps.length){
@@ -44,7 +54,10 @@ function updateEpisode(episode) {
     document.getElementById("EpisodioNumero").innerHTML = descriptores[currentEp]; // update description by index
 
     // guardar el episodio en la url
-    window.history.pushState(null, null, '?index=' + currentEp.toString());
+    //window.history.pushState(null, null, '?index=' + currentEp.toString());
+
+    // guardar ep en la cookie
+    Cookies.set("lastEpisode", currentEp, {expires: 365});
 }
 
 // auto plays the next episode
@@ -52,7 +65,11 @@ function episodioTermino(e){
     updateEpisode(1);
 }
 
-var currentEp = 0;
+
+
+
+
+
 var eps = ["https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=A03A8966D3E08B51%21162302&authkey=AHTxfC0j3yF3ers",
     "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=A03A8966D3E08B51%21162301&authkey=ALIHUAI_P4_4NJk",
     "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=A03A8966D3E08B51%21162303&authkey=ANxRnZvfRS283qc",
