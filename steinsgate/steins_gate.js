@@ -1,75 +1,3 @@
-// todo clear cache and how do I check if playback is idle because the cache is corrupted
-
-// todo script to change between player sizes depending on screen size (mobile vs pc)
-
-
-var currentEp = 0;
-
-function updateEpisode(episode) {
-    //Cookies.set('lastEpisode','value', {expires: 365});
-    // conseguir el episodio de la url si hay uno.
-    //var url = new URL(window.location.href) ;
-
-    // get episode from cookie if there is one
-    var lastEp = Cookies.get('lastEpisode');
-    console.log(lastEp);
-
-    //if(url.searchParams.get('index') != null){
-    //    currentEp = parseInt(url.searchParams.get('index')); // como side effect ahora esto guarda el current episode, y lo lee de nuevo de la url cuando cambia de episodio
-    //}
-    if(lastEp !== undefined){
-        currentEp = parseInt(lastEp);
-    }
-
-    if(currentEp + episode >= 0 && currentEp + episode < eps.length){
-        currentEp += episode;
-
-        var vid = document.getElementById("VideoSource");
-        vid.src = eps[currentEp];
-        var player = document.getElementById("VideoPlayer");
-        player.load();
-    }
-
-    // ocultar anterior si es el primer elemento
-    if(currentEp === 0){
-        document.getElementById("bAnterior").style.visibility = "hidden";
-    }
-    else{
-        document.getElementById("bAnterior").style.visibility = "visible";
-    }
-
-    // ocultar siguente si es el ultimo de la lista
-    if(currentEp < eps.length - 1){
-        document.getElementById("bSiguiente").style.visibility = "visible";
-    }
-    else{
-        document.getElementById("bSiguiente").style.visibility = "hidden";
-    }
-
-    // update ep number
-    document.getElementById("EpisodioNumero").innerHTML = "Episodio " + (currentEp + 1);
-
-    // update title and description
-    document.getElementById("Titulo").innerHTML = titulos[currentEp]; // update title by index
-    document.getElementById("EpisodioNumero").innerHTML = descriptores[currentEp]; // update description by index
-
-    // guardar el episodio en la url
-    //window.history.pushState(null, null, '?index=' + currentEp.toString());
-
-    // guardar ep en la cookie
-    Cookies.set("lastEpisode", currentEp, {expires: 365});
-}
-
-// auto plays the next episode
-function episodioTermino(e){
-    updateEpisode(1);
-}
-
-
-
-
-
-
 var eps = ["https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=A03A8966D3E08B51%21162302&authkey=AHTxfC0j3yF3ers",
     "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=A03A8966D3E08B51%21162301&authkey=ALIHUAI_P4_4NJk",
     "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=A03A8966D3E08B51%21162303&authkey=ANxRnZvfRS283qc",
@@ -125,8 +53,6 @@ var eps = ["https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=A03A89
     "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=A03A8966D3E08B51%21162376&authkey=AFFouQdeD8Lx-jE",
     "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=A03A8966D3E08B51%21162379&authkey=AN8e1vf_94SGGLQ",
     "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=A03A8966D3E08B51%21162378&authkey=AJvYceKLRSzrETU"]
-
-
 
 var titulos = ["Steins;Gate",
     "Steins;Gate",
@@ -239,3 +165,18 @@ var descriptores = ["Episodio 1",
     "Corto 2",
     "Corto 3",
     "Corto 4"]
+
+// todo clear cache and how do I check if playback is idle because the cache is corrupted
+
+let currentEp = 0;
+
+var episodeParams = new UpdateEpisodeParams("steinsgate", eps, titulos, descriptores, "VideoSource", "VideoPlayer", "bAnterior", "bSiguiente", "EpisodeNumber", "Titulo");
+
+// auto plays the next episode
+function episodeEnded(){
+    updateEpisode(1, currentEp, episodeParams);
+}
+
+function ChangeEpisode(delta) {
+    currentEp = updateEpisode(delta, currentEp, episodeParams);
+}

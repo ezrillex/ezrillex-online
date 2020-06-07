@@ -7,6 +7,8 @@
     <link rel="stylesheet" type="text/css" href="steins_gate.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script> <!--cookies library-->
+    <script src="../scripts/legacy.js"></script>
+    <script src="../scripts/updateEpisode.js"></script>
     <script type="text/javascript" src="steins_gate.js"></script>
     <meta name="robots" content="noindex"> <!--Se supone esto bloquea que la pagina no sea indexada-->
     <meta property="og:title" content="Steins;Gate">
@@ -19,20 +21,23 @@
 <body>
     <div id="ContenedorTextos">
         <h1 id="Titulo">Steins;Gate</h1>
-        <br>
-        <h4 id="EpisodioNumero">Episodio 1</h4>
-        <br>
-        <button id="bAnterior" type="button" onclick="updateEpisode(-1)">Anterior</button>
-        <button id="bSiguiente" type="button" onclick="updateEpisode(1)">Siguiente</button>
-        <br>
+
+        <h4 id="EpisodeNumber">Episodio 1</h4>
+
+        <button id="bAnterior" type="button" onclick="ChangeEpisode(-1)">Anterior</button>
+        <button id="bSiguiente" type="button" onclick="ChangeEpisode(1)">Siguiente</button>
+
     </div>
 
     <video id="VideoPlayer" controls autoplay>
         <source id="VideoSource" src="" type="video/mp4">
     </video>
     <script>
-        updateEpisode(0);
-        document.getElementById("VideoPlayer").addEventListener('ended', episodioTermino,false);
-    </script> <!--LLama esto solo una vez?-->
-</body>
+        // legacy checks to not break old episode tracking
+        checkForOGSteinsGateLastEpisode();
+        checkForOGEpisodeIndexing("steinsgate");
 
+        ChangeEpisode(0);
+        document.getElementById("VideoPlayer").addEventListener('ended', episodeEnded,false);
+    </script>
+</body>

@@ -1,11 +1,8 @@
-body{
-    font-family: 'Fredoka One', cursive;
-}
 
-button{
+* {
     font-family: 'Fredoka One', cursive;
+    text-align: center;
 }
-
 video{
     display: block;
     margin: 0 auto;
@@ -28,20 +25,20 @@ video{
     visibility: hidden; 
 }
 
-#ContenedorTextos{
-    margin: auto;
-    text-align: center;
+
+
+#ContenedorTextos button{
+    margin-top:0;
+    margin-bottom: 5px;
+    font-size: medium;
 }
 
-#VideoPlayer{
-    margin-top: 0.5cm;
+#EpisodeNumber{
+    margin: 4px;
 }
+
 
 #Titulo{
     margin-bottom: 0;
-}
-
-#EpisodioNumero{
     margin-top: 0;
-    margin-bottom: 0;
 }

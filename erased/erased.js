@@ -14,7 +14,19 @@ var eps = ["https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=A03A89
 ]
 // todo clear cache and how do I check if playback is idle because the cache is corrupted
 
-function updateEpisodio(episode) {
+let titulos = [];
+for(let i = 0; i < eps.length; i++){
+    titulos.push("Desaparecida")
+}
+let descriptores = [];
+for(let i = 1; i <= eps.length; i++){
+    const epDes = "Episodio "+ i;
+    descriptores.push(epDes);
+}
+
+const episodeParams = new UpdateEpisodeParams("erased", eps, titulos, descriptores, "VideoSource", "VideoPlayer", "bAnterior", "bSiguiente", "EpisodeNumber", "Titulo");
+
+/*function updateEpisodio(episode) {
 
     // conseguir el episodio de la url si hay uno.
     var url = new URL(window.location.href) ;
@@ -46,13 +58,17 @@ function updateEpisodio(episode) {
         document.getElementById("bSiguiente").style.visibility = "hidden";
     }
 
-    document.getElementById("EpisodioNumero").innerHTML = "Episodio " + (currentEp); // update ep number
+    document.getElementById("EpisodeNumber").innerHTML = "Episodio " + (currentEp); // update ep number
 
     // guardar el episodio en la url
     window.history.pushState(null, null, '?episodio=' + currentEp.toString());
-}
+}*/
 
 // auto plays the next episode
-function episodioTermino(e){
+function episodeEnded(){
     updateEpisodio(1);
+}
+
+function ChangeEpisode(delta) {
+    currentEp = updateEpisode(delta, currentEp, episodeParams);
 }

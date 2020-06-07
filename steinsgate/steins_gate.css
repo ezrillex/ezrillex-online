@@ -4,6 +4,7 @@ body{
 
 button{
     font-family: 'Nanum Myeongjo', serif;
+    margin-top: 5px;
 }
 video{
     display: block;
@@ -34,14 +35,15 @@ video{
 }
 
 #VideoPlayer{
-    margin-top: 0.5cm;
+    margin-top: 5px;
 }
 
 #Titulo{
     margin-bottom: 0;
+    margin-top: 0;
 }
 
-#EpisodioNumero{
+#EpisodeNumber{
     margin-top: 0;
     margin-bottom: 0;
 }

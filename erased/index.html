@@ -5,6 +5,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet"> <!--antes de la style sheet porque tiene que cargar el recurso antes-->
     <link rel="stylesheet" type="text/css" href="erased.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script> <!--cookies library-->
+    <script type="text/javascript" src="../scripts/legacy.js"></script>
+    <script type="text/javascript" src="../scripts/updateEpisode.js"></script>
     <script type="text/javascript" src="erased.js"></script>
     <meta name="robots" content="noindex"> <!--Se supone esto bloquea que la pagina no sea indexada-->
     <meta property="og:title" content="Erased">
@@ -17,11 +20,11 @@
 <body>
     <div id="ContenedorTextos">
         <h1 id="Titulo">"Desaparecida"</h1>
-        <br>
-        <h4 id="EpisodioNumero">Episodio 1</h4>
-        <br>
-        <button id="bAnterior" type="button" onclick="updateEpisodio(-1)">Anterior</button>
-        <button id="bSiguiente" type="button" onclick="updateEpisodio(1)">Siguiente</button>
+
+        <h4 id="EpisodeNumber">Episodio 1</h4>
+
+        <button id="bAnterior" type="button" onclick="ChangeEpisode(-1)">Anterior</button>
+        <button id="bSiguiente" type="button" onclick="ChangeEpisode(1)">Siguiente</button>
         <br>
     </div>
 
@@ -29,8 +32,10 @@
         <source id="VideoSource" src="" type="video/mp4">
     </video>
     <script>
-        updateEpisodio(0);
-        document.getElementById("VideoPlayer").addEventListener('ended', episodioTermino,false);
+        checkForOGEpisodeIndexing('erased');
+
+        ChangeEpisode(0);
+        document.getElementById("VideoPlayer").addEventListener('ended', episodeEnded,false);
     </script> <!--LLama esto solo una vez?-->
 </body>
 
