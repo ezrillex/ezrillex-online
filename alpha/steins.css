@@ -54,5 +54,39 @@ button{
         width: 16%;
     }
 }
+/*        EPISODES CSS  */
 
+#EpisodeList li span b{
+    font-size: large;
+    color: whitesmoke;
+}
+.align-left{
+    display: inline-block;
+    text-align: left;
+}
+.white-check{
+    filter: invert(100%);
+}
+#EpisodeList{
+    text-align: center;
+    list-style: none;
+}
+#EpisodeList li button{
+    background-color: whitesmoke;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    margin-left: 5px;
+    box-shadow: 0 2px lightgray;
+}
+#EpisodeList li button:hover{
+    background-color: white;
+}
 
+#EpisodeList li button:active{
+    background-color: lightblue;
+    box-shadow: 0 1px lightgray;
+    transform: translateY(1px);
+}
+
+/* END OF EPISODES CSS */
