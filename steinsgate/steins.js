@@ -180,6 +180,12 @@ function ChangeEpisode(delta) {
 }
 
 function Startup(){
+    // load site wide tags and the navbar
+    $(function(){
+        $("<div>").load("../sitewide.html").unwrap().appendTo("#headTag");
+        $("#navigation").load("../navbar.html");
+    });
+
     // legacy checks to not break old episode tracking
     checkForOGSteinsGateLastEpisode();
     checkForOGEpisodeIndexing("steinsgate");

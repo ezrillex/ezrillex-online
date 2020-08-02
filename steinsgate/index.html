@@ -10,27 +10,16 @@
     <meta property="og:url" content="https://ezrillex.online/steinsgate/index.html">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ezrillex.online/scripts/js.cookie-2.2.1.min.js"></script> <!--cookies library-->
 
     <link rel="shortcut icon" href="../images/favicon.png" >
 
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&display=swap" rel="stylesheet">
-
     <link href="steins.css" rel="stylesheet">
 
-    <script src="../scripts/updateEpisode.js"></script>
+    <script type="text/javascript" src="../scripts/updateEpisode.js"></script>
     <script type="text/javascript" src="steins.js"></script>
-    <script src="../scripts/legacy.js"></script>
-
-
-    <script>
-        // load site wide tags and the navbar
-        $(function(){
-            $("<div>").load("../sitewide.html").unwrap().appendTo("#headTag");
-            $("#navigation").load("../navbar.html");
-        });
-
-    </script>
-
+    <script type="text/javascript" src="../scripts/legacy.js"></script>
 </head>
 <body onload="Startup()">
 <div class="bg">
@@ -70,6 +59,7 @@
 <audio id="tuturu" style="display: none; visibility: hidden">
     <source src="../audio/tuturu.mp3" type="audio/mpeg">
 </audio>
+
 <script>
     console.log("El psy congroo.");
 </script>
