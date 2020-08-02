@@ -8,7 +8,7 @@ function checkForOGSteinsGateLastEpisode(){
 }
 
 function checkForOGEpisodeIndexing(seriesName) {
-    var url = new URL(window.location.href);
+    const url = new URL(window.location.href);
     if(url.searchParams.get('index') != null){
         const a = parseInt(url.searchParams.get('index'));
         url.searchParams.delete("index");

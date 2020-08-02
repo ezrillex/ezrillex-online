@@ -21,7 +21,7 @@ class UpdateEpisodeParams
             this.videoPlayer = videoPlayer,
             this.previousButton = previousButton,
             this.nextButton = nextButton,
-            this.episodeNumberElement = episodeNumberElement,
+            this.episodeNumberElement = episodeNumberElement ,
             this.episodeTitleElement = episodeTitleElement
     }
 }
@@ -32,6 +32,8 @@ function updateEpisode(episodeDelta, currentEp, eParams) {
 
     if(lastEp !== undefined){
         currentEp = parseInt(lastEp);
+    }else{
+        currentEp = 0;
     }
 
     if(currentEp + episodeDelta >= 0 && currentEp + episodeDelta < eParams.episodeLinks.length){
