@@ -81,7 +81,14 @@ function ChangeEpisode(delta) {
     currentEp = updateEpisode(delta, currentEp, episodeParams);
 }
 
+// cookies is the only shit that gives problems
 function Startup(){
+    // load site wide css/tags and the navbar
+    $(function(){
+        $("<div>").load("../../sitewide.html").unwrap().appendTo("#headTag");
+        $("#navigation").load("../../navbar.html");
+    });
     ChangeEpisode(0);
     document.getElementById("VideoPlayer").addEventListener('ended', episodeEnded,false);
 }
+

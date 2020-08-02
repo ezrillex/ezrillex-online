@@ -9,26 +9,15 @@
     <meta property="og:image" content="https://ezrillex.online/fate/staynight/poster.jpg">
     <meta property="og:url" content="https://ezrillex.online/fate/staynight/index.html">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://ezrillex.online/scripts/js.cookie-2.2.1.min.js"></script> <!--cookies library-->
 
-    <link rel="shortcut icon" href="../../images/favicon.png" > <!--el favicon tiene que llamarse shortcut icon-->
-    <!--antes de la style sheet porque tiene que cargar el recurso antes-->
+    <link rel="shortcut icon" href="../../images/favicon.png" >
     <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap" rel="stylesheet">
     <link href="staynight.css" rel="stylesheet">
 
-    <script src="../../scripts/updateEpisode.js"></script>
+    <script type="text/javascript" src="../../scripts/updateEpisode.js"></script>
     <script type="text/javascript" src="staynight.js"></script>
-
-
-    <script>
-        // load site wide tags and the navbar
-        $(function(){
-            $("<div>").load("../../sitewide.html").unwrap().appendTo("#headTag");
-            $("#navigation").load("../../navbar.html");
-        });
-
-    </script>
-
 </head>
 <body onload="Startup()">
     <div id="navigation"></div>
@@ -57,9 +46,9 @@
         <div class="row justify-content-center">
             <!--<button disabled type="button" class="btn btn-light">Cuando un episodio termina el siguente se reproduce automáticamente. Tu dispositivo recuerda el ultimo episodio en el que te quedaste.</button>-->
             <p class="text-center">Next episode auto-plays; Your device saves what episode you last saw.</p>
-
         </div>
         <br>
     </div>
+
 </body>
 </html>
