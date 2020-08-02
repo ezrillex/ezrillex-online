@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head id="headTag">
+    <meta charset="UTF-8">
+    <title>Fate/Stay Night</title>
+    <meta property="og:title" content="Fate/Stay Night">
+    <meta property="og:type" content="video.tv_show">
+    <meta property="og:description" content="The plot focuses on a young mage named Shirou Emiya who becomes a warrior in a battle between &quot;Servants&quot; known as the Holy Grail War.">
+    <meta property="og:image" content="https://ezrillex.online/fate/staynight/poster.jpg">
+    <meta property="og:url" content="https://ezrillex.online/fate/staynight/index.html">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link rel="shortcut icon" href="../../images/favicon.png" > <!--el favicon tiene que llamarse shortcut icon-->
+    <!--antes de la style sheet porque tiene que cargar el recurso antes-->
+    <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap" rel="stylesheet">
+    <link href="staynight.css" rel="stylesheet">
+
+    <script src="../../scripts/updateEpisode.js"></script>
+    <script type="text/javascript" src="staynight.js"></script>
+
+
+    <script>
+        // load site wide tags and the navbar
+        $(function(){
+            $("<div>").load("../../sitewide.html").unwrap().appendTo("#headTag");
+            $("#navigation").load("../../navbar.html");
+        });
+
+    </script>
+
+</head>
+<body onload="Startup()">
+    <div id="navigation"></div>
+    <div class="container">
+        <div class="text-center">
+            <br>
+            <h1 id="Titulo" class="FuenteCustom">Fate/Stay Night</h1>
+            <h6>Adapted by Studio Deen (2005), edited by fans.</h6>
+            <p><i>&quot;Saving someone means not saving someone else&quot;</i><sub>-Emiya Kiritsugu</sub></p><br>
+        </div>
+
+        <div class="row">
+            <div class="embed-responsive embed-responsive-16by9">
+                <video id="VideoPlayer" class="embed-responsive-item" controls autoplay>
+                    <source id="VideoSource" src="" type="video/mp4" />
+                </video>
+            </div>
+        </div>
+        <br>
+        <div class="row justify-content-center">
+            <button id="bAnt" type="button" class="btn btn-primary" onclick="ChangeEpisode(-1)">Previous</button>
+            <button id="EpisodeNumber" disabled type="button" class="btn btn-light">Episode</button>
+            <button id="bSig" type="button" class="btn btn-primary" onclick="ChangeEpisode(1)">Next</button>
+        </div>
+        <br>
+        <div class="row justify-content-center">
+            <!--<button disabled type="button" class="btn btn-light">Cuando un episodio termina el siguente se reproduce automáticamente. Tu dispositivo recuerda el ultimo episodio en el que te quedaste.</button>-->
+            <p class="text-center">Next episode auto-plays; Your device saves what episode you last saw.</p>
+
+        </div>
+        <br>
+    </div>
+</body>
+</html>

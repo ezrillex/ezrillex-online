@@ -166,11 +166,9 @@ var descriptores = ["Episodio 1",
     "Corto 3",
     "Corto 4"]
 
-// todo clear cache and how do I check if playback is idle because the cache is corrupted
-
 let currentEp = 0;
 
-var episodeParams = new UpdateEpisodeParams("steinsgate", eps, titulos, descriptores, "VideoSource", "VideoPlayer", "bAnterior", "bSiguiente", "EpisodeNumber", "Titulo");
+var episodeParams = new UpdateEpisodeParams("steinsgate", eps, titulos, descriptores, "VideoSource", "VideoPlayer", "bAnt", "bSig", "EpisodeNumber", "Titulo");
 
 // auto plays the next episode
 function episodeEnded(){
@@ -179,4 +177,19 @@ function episodeEnded(){
 
 function ChangeEpisode(delta) {
     currentEp = updateEpisode(delta, currentEp, episodeParams);
+}
+
+function Startup(){
+    // legacy checks to not break old episode tracking
+    checkForOGSteinsGateLastEpisode();
+    checkForOGEpisodeIndexing("steinsgate");
+
+    ChangeEpisode(0);
+    document.getElementById("VideoPlayer").addEventListener('ended', episodeEnded,false);
+
+}
+
+function tuturuPlay() {
+    var tu = document.getElementById("tuturu");
+    tu.play();
 }

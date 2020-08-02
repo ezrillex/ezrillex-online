@@ -5,6 +5,13 @@
       <webServer id="c6d7a6c7-c079-490b-9ade-75d805b954f5" name="ezrillex.online ftp" url="https://ezrillex.online">
         <fileTransfer host="bbass.info" port="21">
           <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" showHiddenFiles="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="5a4d13d1-7b95-4dfd-8eba-f86769b33b7b" name="ftp api" url="http://ezrillex.online/api">
+        <fileTransfer host="bbass.info" port="21">
+          <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>
         </fileTransfer>
