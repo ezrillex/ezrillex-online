@@ -1,41 +1,57 @@
 <!DOCTYPE html>
-<head>
-    <title>Erased</title>
-    <link rel="shortcut icon" href="../images/favicon.png" > <!--el favicon tiene que llamarse shortcut icon-->
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet"> <!--antes de la style sheet porque tiene que cargar el recurso antes-->
-    <link rel="stylesheet" type="text/css" href="erased.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script> <!--cookies library-->
-    <script type="text/javascript" src="../scripts/legacy.js"></script>
-    <script type="text/javascript" src="../scripts/updateEpisode.js"></script>
-    <script type="text/javascript" src="erased.js"></script>
-    <meta name="robots" content="noindex"> <!--Se supone esto bloquea que la pagina no sea indexada-->
+<html lang="es">
+<head id="headTag">
+    <meta charset="utf-8"/> <!-- Because tildes and japanese text fail to load correctly -->
+    <title>Desaparecida</title>
     <meta property="og:title" content="Erased">
     <meta property="og:type" content="video.tv_show">
     <meta property="og:description" content="Satoru Fujinuma trabaja como repartidor de pizzas para llegar a final de mes. Lo que no sabe nadie es que posee un don excepcional: cada vez que tiene lugar alguna tragedia cerca de él es proyectado unos minutos hacia atrás en el tiempo para tratar de impedirla. Precisamente uno de estos episodios hace aflorar los recuerdos reprimidos de su infancia traumática, lo que acaba teniendo consecuencias demoledoras y trágicas en su presente. Una vez más, sufre una de sus Regresiones, solo que esta vez lo lleva hasta el año 1988, justo antes de que su compañera de clase Kayo Hinazuki se convirtiera en la primera víctima de un asesino en serie. ¿Será el Satoru de 10 años capaz de reparar el pasado para cambiar el presente?">
     <meta property="og:image" content="https://ezrillex.online/erased/poster.jpg">
     <meta property="og:url" content="https://ezrillex.online/erased/index.html">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://ezrillex.online/scripts/js.cookie-2.2.1.min.js"></script> <!--cookies library-->
+
+    <link rel="shortcut icon" href="../images/favicon.png" >
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet"> <!--antes de la style sheet porque tiene que cargar el recurso antes-->
+
+    <link rel="stylesheet" type="text/css" href="erased.css">
+
+    <script type="text/javascript" src="../scripts/legacy.js"></script>
+    <script type="text/javascript" src="../scripts/updateEpisode.js"></script>
+    <script type="text/javascript" src="erased.js"></script>
 </head>
+<body onload="Startup()">
+    <div id="navigation"></div>
+    <div class="container">
+        <div class="text-center">
+            <br>
+            <h1 id="Titulo" class="FuenteCustom">Erased.</h1>
+            <p><i>&quot;Todo lo que se avecina aún está por determinar. El fin está en algún lugar lejano del futuro y es desconocido.&quot;</i><sub>-Airi Katagiri</sub></p><br>
+        </div>
 
-<body>
-    <div id="ContenedorTextos">
-        <h1 id="Titulo">"Desaparecida"</h1>
-
-        <h4 id="EpisodeNumber">Episodio 1</h4>
-
-        <button id="bAnterior" type="button" onclick="ChangeEpisode(-1)">Anterior</button>
-        <button id="bSiguiente" type="button" onclick="ChangeEpisode(1)">Siguiente</button>
+        <div class="row">
+            <div class="embed-responsive embed-responsive-16by9">
+                <video id="VideoPlayer" class="embed-responsive-item" controls autoplay>
+                    <source id="VideoSource" src="" type="video/mp4" />
+                </video>
+            </div>
+        </div>
         <br>
+        <div class="row justify-content-center">
+            <button id="bAnt" type="button" class="btn btn-primary" onclick="ChangeEpisode(-1)">Anterior</button>
+            <button id="EpisodeNumber" disabled type="button" class="btn btn-light">Episodio</button>
+            <button id="bSig" type="button" class="btn btn-primary" onclick="ChangeEpisode(1)">Siguiente</button>
+        </div>
+        <br>
+        <div class="row justify-content-center" >
+            <button disabled type="button" class="btn btn-dark">Cuando un episodio termina el siguente se reproduce automáticamente. Tu dispositivo recuerda el ultimo episodio en el que te quedaste.</button>
+        </div>
+        <br>
+        <br>
+
     </div>
+    <div id="footerTag"></div>
 
-    <video id="VideoPlayer" controls autoplay>
-        <source id="VideoSource" src="" type="video/mp4">
-    </video>
-    <script>
-        checkForOGEpisodeIndexing('erased');
-
-        ChangeEpisode(0);
-        document.getElementById("VideoPlayer").addEventListener('ended', episodeEnded,false);
-    </script> <!--LLama esto solo una vez?-->
 </body>
-
+</html>
