@@ -21,28 +21,7 @@ var descriptores = ["Episode 0 v2",
     "Episode 20 v2",
 ]
 
-var titulos = ["Fate/Stay Night",
-    "Fate/Stay Night",
-    "Fate/Stay Night",
-    "Fate/Stay Night",
-    "Fate/Stay Night",
-    "Fate/Stay Night",
-    "Fate/Stay Night",
-    "Fate/Stay Night",
-    "Fate/Stay Night",
-    "Fate/Stay Night",
-    "Fate/Stay Night",
-    "Fate/Stay Night",
-    "Fate/Stay Night",
-    "Fate/Stay Night",
-    "Fate/Stay Night",
-    "Fate/Stay Night",
-    "Fate/Stay Night",
-    "Fate/Stay Night",
-    "Fate/Stay Night",
-    "Fate/Stay Night",
-    "Fate/Stay Night",
-]
+
 
 var eps = ["https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=A03A8966D3E08B51%21222662&authkey=ACTJ9yO1MTQrF8E",
     "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=A03A8966D3E08B51%21222654&authkey=AEAcnOlGbjBKW7A",
@@ -67,6 +46,10 @@ var eps = ["https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=A03A89
     "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=A03A8966D3E08B51%21222650&authkey=AM-SUsYj2QqBxC4",
 ]
 
+let titulos = [];
+for(let i = 0; i < eps.length; i++){
+    titulos.push("Fate/Stay Night")
+}
 
 let currentEp = 0;
 
@@ -87,6 +70,7 @@ function Startup(){
     $(function(){
         $("<div>").load("../../sitewide.html").unwrap().appendTo("#headTag");
         $("#navigation").load("../../navbar.html");
+        $("#footerTag").load("../../footer.html");
     });
     ChangeEpisode(0);
     document.getElementById("VideoPlayer").addEventListener('ended', episodeEnded,false);
