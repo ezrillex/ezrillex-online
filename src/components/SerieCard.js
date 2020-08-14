@@ -1,14 +1,15 @@
 import React from "react";
 import { Link } from "gatsby";
 import { Card } from "react-bootstrap";
+import Img from "gatsby-image";
 
-const SerieCard = ({page_to_link_to, poster, alternative_text, overlay_text, putatbottom}) => {
+const SerieCard = ({poster, data}) => {
+    console.log(data.slug);
     return (
         <Card className="col-md border-0 mb-3">
-            <Link to={page_to_link_to}>
-                <img className="card-img" src={poster}
-                     alt={alternative_text}/>
-                {CardOverlay(overlay_text, putatbottom)}
+            <Link to={data.slug}>
+                 <Img className="card-img" fluid={poster}/>
+                {CardOverlay(data.message, data.msgAtBottom)}
             </Link>
         </Card>
     );
@@ -16,19 +17,17 @@ const SerieCard = ({page_to_link_to, poster, alternative_text, overlay_text, put
 
 export default SerieCard;
 
-function CardOverlay(text_prop, topbot){
-    if(text_prop !== undefined){
+function CardOverlay(msg, bottom){
+    if(msg !== null){
         var cardClassNames = "card-img-overlay d-flex align-items-center ";
-        if(topbot !== undefined){
-            if(topbot === true){
-                cardClassNames += " flex-column-reverse"
-            }
+        if(bottom !== null && bottom === true){
+            cardClassNames += " flex-column-reverse"
         }else{
             cardClassNames += " flex-column";
         }
 
         return <div className={cardClassNames}>
-            <b className="btn btn-black rounded-pill p-2 text-white border border-white shadow-none ">{text_prop}</b>
+            <b className="btn btn-black rounded-pill p-2 text-white border border-white shadow-none ">{msg}</b>
         </div>
     }
     else

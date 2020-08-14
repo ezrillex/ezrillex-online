@@ -1,5 +1,4 @@
 import React from "react";
-import {Helmet} from "react-helmet/es/Helmet";
 import { Container } from "react-bootstrap";
 import Layout from "../components/layout";
 import DefaultDance from "../images/default_dance.gif";

@@ -2,7 +2,6 @@ import React from "react";
 import { Jumbotron, Container } from "react-bootstrap";
 
 import Layout from "../components/layout"
-import {Helmet} from "react-helmet/es/Helmet";
 import PageName from "../components/PageName";
 
 const Progra2Redir = () => (

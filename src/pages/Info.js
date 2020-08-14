@@ -1,14 +1,12 @@
 import React from "react"
 import { Link } from "gatsby"
 import { Jumbotron, Container } from "react-bootstrap";
-
 import Layout from "../components/layout"
-import {Helmet} from "react-helmet/es/Helmet";
 import PageName from "../components/PageName";
 
 const InfoPage = () => (
     <Layout pageInfo={{ pageName: "InfoPage" }}>
-        <PageName/>
+        <PageName pTitle="Contacto"/>
         <Container>
             <Jumbotron>
                 <h1>Información.</h1>
