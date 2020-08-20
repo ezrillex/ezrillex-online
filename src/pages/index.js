@@ -19,15 +19,3 @@ const IndexPage = () => (
 
 export default IndexPage;
 
-
-/*<Img fluid={data.headhunterImage.childImageSharp.fluid} width="30%" alt="Headhunter art" />
-export const query = graphql `query {
-   headhunterImage: file(relativePath: {eq: "HH.jpg"}) {
-    childImageSharp {
-      fluid(maxWidth: 500) {
-        ...GatsbyImageSharpFluid
-      }
-    }
-  }
-}
-`*/

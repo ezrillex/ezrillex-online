@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react"
-
 import {
   Jumbotron,
   Container,
@@ -8,26 +7,35 @@ import {
   Button,
   Col,
 } from "react-bootstrap"
-
 import Cookies from "js-cookie"
 
 const Player = ({ data }) => {
 
   useEffect(() => {
-    updateEpisode(0)
+    updateEpisode(0);
+    SetSeleccion(currentEp);
   })
 
+  const [SeleccionLista, SetSeleccion] = useState("")
   const [VideoSource, SetVideoSource] = useState("")
-
   const [ShowNext, SetNextState] = useState(false)
   const [ShowPrevious, SetPreviousState] = useState(false)
-
   const [Title, SetTitle] = useState("")
-  const [EpisodeName, SetEpisodeName] = useState("")
+  //const [EpisodeName, SetEpisodeName] = useState("")
 
   var currentEp = 0
 
-  function updateEpisode(episodeDelta) {
+  var opciones = [];
+  for(var i = 0; i < data.episode_name.length; i++){
+    opciones.push(<option value={i}>{data.episode_name[i]}</option>);
+  }
+
+  function handleChange(event) {
+    updateEpisode(0, event.target.value);
+    SetSeleccion(event.target.value);
+  }
+
+  function updateEpisode(episodeDelta, forcedIndex=undefined) {
     // get episode from cookie if there is one
     var lastEp = Cookies.get(data.cookie_id);
 
@@ -35,6 +43,10 @@ const Player = ({ data }) => {
       currentEp = parseInt(lastEp)
     } else {
       currentEp = 0
+    }
+
+    if(forcedIndex !== undefined){
+      currentEp = parseInt( forcedIndex);
     }
 
     if (
@@ -67,7 +79,7 @@ const Player = ({ data }) => {
       SetTitle(data.titles[0])
     }
 
-    SetEpisodeName(data.episode_name[currentEp])
+    // SetEpisodeName(data.episode_name[currentEp])
 
     // guardar ep en la cookie
     Cookies.set(data.cookie_id, currentEp, { expires: 365 })
@@ -80,6 +92,7 @@ const Player = ({ data }) => {
   function next() {
     updateEpisode(1)
   }
+
   return (
     <Container>
       <Jumbotron className="text-center ">
@@ -100,6 +113,7 @@ const Player = ({ data }) => {
               onEnded={() => {
                 next()
               }}
+
             />
           </ResponsiveEmbed>
         </Row>
@@ -110,7 +124,11 @@ const Player = ({ data }) => {
             style={ShowPrevious ? { display: "inline" } : { display: "none" }}
           />
 
-          <span className="ml-3 mr-3">{EpisodeName}</span>
+          <form className="ml-3 mr-3">
+            <select value={SeleccionLista} onChange={handleChange}>
+              {opciones}
+            </select>
+          </form>
 
           <Button
             id="ButtonNext"
