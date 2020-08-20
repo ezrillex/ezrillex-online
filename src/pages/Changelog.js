@@ -10,11 +10,17 @@ const ChangelogPage = () => (
         <Container>
             <Jumbotron>
 
-                <h4>[Unreleased] v0.3.2</h4>
+                <h4>[Unreleased] v0.3.3</h4>
                 <ul>
                     <li>Deploy BDRip of UBW.</li>
-                    <li>Transcode web-optimized UBW BDrip. (5/26)</li>
+                    <li>Transcode web-optimized UBW BDrip. (12/26)</li>
                     <li>Markdown-based blog.</li>
+
+                </ul>
+
+                <h4>v0.3.2</h4>
+                <ul>
+                    <li>Deployed BDRip of FZero.</li>
                     <li>Changed episode names to a dropdown list to easily jump between multiple episodes.</li>
                 </ul>
 

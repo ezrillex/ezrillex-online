@@ -6,7 +6,7 @@ import PageName from "../components/PageName";
 import {graphql} from "gatsby";
 
 const SeriesPage = ({ data }) => {
-    var imagenes = {}
+    var imagenes = {};
     data.imagenesSeries.edges.forEach((imagen) => {
         imagenes[imagen.node.base] = imagen.node.childImageSharp.fluid;
     });
@@ -67,10 +67,3 @@ query  {
 `
 
 
-
-/*<SerieCard alternative_text={"Steins;Gate Poster"} poster={ SGPoster } page_to_link_to={SeriesData.SteinsGate.slug} />
-      <SerieCard alternative_text={"Fate/Zero Poster"} poster={ FZeroPoster } page_to_link_to={SeriesData.fatezero.slug}/>
-      <SerieCard alternative_text={"Erased Poster"} poster={ ErasedPoster } page_to_link_to={SeriesData.erased.slug}/>
-      <SerieCard alternative_text={"Fate/Stay Night Poster"} overlay_text={SeriesData.fatestaynightreddit.message} poster={ StayNightPoster } page_to_link_to={SeriesData.fatestaynightreddit.slug}/>
-      <SerieCard alternative_text={"Fate/Stay Night Poster"} overlay_text={SeriesData.fatestaynightes.message} poster={ StayNightPoster } page_to_link_to={SeriesData.fatestaynightes.slug}/>
-      <SerieCard alternative_text={"Fate/Unlimited BladeWorks Poster"} overlay_text={SeriesData.fatestaynightubw.message} poster={ UBWPoster } page_to_link_to={SeriesData.fatestaynightubw.slug}/>*/

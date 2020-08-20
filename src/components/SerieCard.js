@@ -4,7 +4,7 @@ import { Card } from "react-bootstrap";
 import Img from "gatsby-image";
 
 const SerieCard = ({poster, data}) => {
-    console.log(data.slug);
+    //console.log(data.slug);
     return (
         <Card className="col-md border-0 mb-3">
             <Link to={data.slug}>
