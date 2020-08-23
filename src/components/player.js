@@ -36,7 +36,7 @@ const Player = ({ data }) => {
   }
 
   function updateEpisode(episodeDelta, forcedIndex=undefined) {
-    console.log("episode update called")
+    //console.log("episode update called")
 
 
     // get episode from cookie if there is one
@@ -96,9 +96,6 @@ const Player = ({ data }) => {
     updateEpisode(1)
   }
 
-  function test(){
-    alert("bruh");
-  }
 
   return (
     <Container>
@@ -124,9 +121,7 @@ const Player = ({ data }) => {
             />
           </ResponsiveEmbed>
         </Row>
-        <Row>
-          <Button onClick={test} >FORCE LOAD VIDEO</Button>
-        </Row>
+
         <Row className="d-flex justify-content-center align-items-center mt-3 ">
           <Button
             onClick={back}
