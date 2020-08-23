@@ -13,14 +13,13 @@ const ChangelogPage = () => (
                 <h4>[Unreleased] v0.3.3</h4>
                 <ul>
                     <li>Deploy BDRip of UBW.</li>
-                    <li>Transcode web-optimized UBW BDrip. (12/26)</li>
+                    <li>Transcode web-optimized UBW BDrip. (16/26)</li>
                     <li>Markdown-based blog.</li>
-
                 </ul>
 
                 <h4>v0.3.2</h4>
                 <ul>
-                    <li>Deployed BDRip of FZero.</li>
+                    <li><del>Deployed BDRip of FZero.</del> Rollback due to mobile devices not supporting the video codec.</li>
                     <li>Changed episode names to a dropdown list to easily jump between multiple episodes.</li>
                 </ul>
 

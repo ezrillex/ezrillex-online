@@ -10,11 +10,11 @@ import {
 import Cookies from "js-cookie"
 
 const Player = ({ data }) => {
-
+  console.log("player code was executed");
   useEffect(() => {
     updateEpisode(0);
     SetSeleccion(currentEp);
-  })
+  });
 
   const [SeleccionLista, SetSeleccion] = useState("")
   const [VideoSource, SetVideoSource] = useState("")
@@ -27,7 +27,7 @@ const Player = ({ data }) => {
 
   var opciones = [];
   for(var i = 0; i < data.episode_name.length; i++){
-    opciones.push(<option value={i}>{data.episode_name[i]}</option>);
+    opciones.push(<option key={i.toString()} value={i}>{data.episode_name[i]}</option>);
   }
 
   function handleChange(event) {
@@ -36,6 +36,9 @@ const Player = ({ data }) => {
   }
 
   function updateEpisode(episodeDelta, forcedIndex=undefined) {
+    console.log("episode update called")
+
+
     // get episode from cookie if there is one
     var lastEp = Cookies.get(data.cookie_id);
 
@@ -93,6 +96,10 @@ const Player = ({ data }) => {
     updateEpisode(1)
   }
 
+  function test(){
+    alert("bruh");
+  }
+
   return (
     <Container>
       <Jumbotron className="text-center ">
@@ -111,13 +118,16 @@ const Player = ({ data }) => {
               className="NoOutline"
               src={VideoSource}
               onEnded={() => {
-                next()
+                next();
               }}
 
             />
           </ResponsiveEmbed>
         </Row>
-        <Row className="d-flex justify-content-center align-items-center ">
+        <Row>
+          <Button onClick={test} >FORCE LOAD VIDEO</Button>
+        </Row>
+        <Row className="d-flex justify-content-center align-items-center mt-3 ">
           <Button
             onClick={back}
             className="btn-black far fa-arrow-alt-circle-left"
