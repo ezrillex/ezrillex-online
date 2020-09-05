@@ -21,6 +21,7 @@ const InfoPage = () => (
                 <br/>
                 <Link to="/">Volver al Inicio</Link>
             </Jumbotron>
+            
         </Container>
     </Layout>
 )
