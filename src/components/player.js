@@ -99,6 +99,10 @@ const Player = ({ data }) => {
 
   return (
     <Container>
+      <div id="fb-root"/>
+      <script async defer crossOrigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v8.0"
+    nonce="c7cpgNfR"/>
+
       <Jumbotron className="text-center ">
         <h1 className={data.customTitleFont}>{Title}</h1>
         <h4 className="d-inline">{data.quote}</h4>
@@ -141,6 +145,11 @@ const Player = ({ data }) => {
             className="btn-black fas fa-arrow-alt-circle-right"
             style={ShowNext ? { display: "inline" } : { display: "none" }}
           />
+        </Row>
+        <Row>
+          <h1>Comentarios</h1>
+          <div className="fb-comments" data-href="https://ezrillex.online/steinsgate" data-numposts="10"
+               data-colorscheme="dark" />
         </Row>
       </Col>
     </Container>
