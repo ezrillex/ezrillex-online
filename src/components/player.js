@@ -146,14 +146,18 @@ const Player = ({ data }) => {
             style={ShowNext ? { display: "inline" } : { display: "none" }}
           />
         </Row>
-        <Row>
-          <h1>Comentarios</h1>
-          <div className="fb-comments" data-href="https://ezrillex.online/steinsgate" data-numposts="10"
-               data-colorscheme="dark" />
-        </Row>
+
       </Col>
     </Container>
   )
 }
 
 export default Player
+
+/*
+<Row> Facebook comments
+          <h1>Comentarios</h1>
+          <div className="fb-comments" data-href="https://ezrillex.online/steinsgate" data-numposts="10"
+               data-colorscheme="dark" />
+        </Row>
+ */

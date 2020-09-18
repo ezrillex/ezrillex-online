@@ -13,7 +13,7 @@ const ChangelogPage = () => (
                 <h4>[Unreleased] v0.3.3</h4>
                 <ul>
                     <li>Deploy BDRip of UBW.</li>
-                    <li>Transcode web-optimized UBW BDrip. (16/26)</li>
+                    <li>Transcode web-optimized UBW BDrip. (26/26)</li>
                     <li>Markdown-based blog.</li>
                 </ul>
 
