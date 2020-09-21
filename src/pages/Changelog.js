@@ -9,12 +9,18 @@ const ChangelogPage = () => (
         <PageName pTitle="Changelog"/>
         <Container>
             <Jumbotron>
+                <h4>[Unreleased] v0.4.0</h4>
+                <ul>
+                    <li>Rewrite in LAMP stack as I don't feel prepared to be using React without actually understanding the underlying intricacies of the framework and manipulate databases with sensitive data (comments, users, posts).</li>
+                    <li>A blog.</li>
+                    <li>A comment section.</li>
+                    <li>Feature parity.</li>
+                </ul>
 
                 <h4>[Unreleased] v0.3.3</h4>
                 <ul>
                     <li>Deploy BDRip of UBW.</li>
                     <li>Transcode web-optimized UBW BDrip. (26/26)</li>
-                    <li>Markdown-based blog.</li>
                 </ul>
 
                 <h4>v0.3.2</h4>
