@@ -17,7 +17,7 @@ const Footer = () => {
             </MDBRow>
             <MDBRow className="footer-copyright text-center mt-3 pb-2">
                 <MDBContainer fluid>
-                    <span>ezrillex.online v0.3.2</span>
+                    <span>ezrillex.online v0.3.3</span>
                 </MDBContainer>
             </MDBRow>
         </MDBContainer>
