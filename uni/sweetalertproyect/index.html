@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<body>
+<form >
+
+    <button type="button" onclick="alertaInsertar()">ALERTA INSERTAR</button>
+    <button type="button"  onclick="alertaEliminar()">ALERTA ELIMINAR</button>
+    <button type="button"  onclick="alertaModificar()">ALERTA MODIFICAR</button>
+    <button type="button"  onclick="Insertar()">ALERTA INSERTAR</button>
+
+</form>
+
+<script type="text/javascript">
+    function alertaInsertar() {
+        Swal.fire({
+            title: 'Registro Insertado',
+            text: 'El registro fue insertado exitosamente!',
+            icon: 'success',
+            confirmButtonText: 'OK'
+        })
+    }
+    function alertaInsertar() {
+        Swal.fire({
+            title: 'Confirmar el Ingreso',
+            text: '¿Esta seguro que desea ingresar al sistema?',
+            icon: 'question',
+            confirmButtonText: 'Si',
+            showDenyButton: true,
+            denyButtonText: 'No',
+        })
+    }
+
+    function alertaEliminar() {
+        Swal.fire({
+            title: 'Confirmar Eliminación',
+            text: '¿Esta seguro que desea eliminar el registro?',
+            icon: 'question',
+            confirmButtonText: 'Si',
+            showDenyButton: true,
+            denyButtonText: 'No',
+        })
+    }
+
+    function alertaModificar() {
+        Swal.fire({
+            title: 'Confirmar Modificación',
+            text: '¿Esta seguro que desea modificar el registro?',
+            icon: 'question',
+            confirmButtonText: 'Si',
+            showDenyButton: true,
+            denyButtonText: 'No',
+        })
+            /*
+            .then((result) => {
+                if (result.isConfirmed) {
+
+                    function DeleteKartItems() {
+                        $.ajax({
+                            type: "POST",
+                            url: 'WebForm1.aspx/MetodoModificar',
+                            data: "",
+                            contentType: "application/json; charset=utf-8",
+                            dataType: "json",
+                            success: function (msg) {
+                                Swal.fire(
+                                    'Exito',
+                                    'El registro ha sido modificado exitosamente!',
+                                    'success'
+                                )
+                            },
+                            error: function (e) {
+                                Swal.fire(
+                                    'Error',
+                                    'Ha ocurrido un error',
+                                    'error'
+                                )
+                            }
+                        });
+                    }
+                }
+            })*/
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante Prueba</title>
+</head>
+<body>
+    <h1>Restaurante</h1>
+    <form action="restaurante.php" method="POST">
+        <select name="TipoComida">
+            <option value="desayuno">Desayuno $2.00</option>
+            <option value="almuerzo">Almuerzo $3.25</option>
+            <option value="cena">Cena $2.50</option>
+        </select><br>
+        Cuantos platos: <input value="0" type="number" name="num_platos"><br>
+        
+        <input type="radio" name="postre" value="sorbete">Sorbete $1.50
+        <input type="radio" name="postre" value="gelatina">Gelatina $0.80
+        <input type="radio" name="postre" value="flan">Flan $1.20
+        <input type="radio" name="postre" value="pastel">Pastel $2.00
+        <br>
+        Cuantos postres: <input value="0" type="number" name="num_postres"><br>
+        <input type="submit">
+    </form>
+</body>
+</html>
