@@ -1,9 +1,9 @@
-
-
-<html>
+<?php session_start(); ?>
+<!DOCTYPE html>
+<html lang="es-sv">
 <head>
-    <title>Changelog - Ezrillex Online</title>
-    <?php include '../components/stylesheets.html' ?>
+    <?php   include '../components/head.html';
+    include '../components/stylesheets.html' ?>
 </head>
 <body>
 <?php include "../components/navbar.php";?>
@@ -14,14 +14,15 @@
         <h4>[Unreleased] v0.4.1</h4>
         <ul>
             <li>A blog.</li>
-            <li>A comment section.</li>
-            <li>A contact form in-site.</li>
+            <li>Something other than a gif on the homepage.</li>
         </ul>
 
-        <h4>[Unreleased] v0.4.0</h4>
+        <h4>v0.4.0</h4>
         <ul>
             <li>Rewrite in LAMP stack.</li>
             <li>Feature parity.</li>
+            <li>Account System</li>
+            <li>A comment section.</li>
         </ul>
 
         <h4>v0.3.3</h4>

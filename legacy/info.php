@@ -1,7 +1,9 @@
-<html>
+<?php session_start(); ?>
+<!DOCTYPE html>
+<html lang="es-sv">
 <head>
-    <title>Contacto - Ezrillex Online</title>
-    <?php include '../components/stylesheets.html' ?>
+    <?php   include '../components/head.html';
+    include '../components/stylesheets.html' ?>
 </head>
 <body>
 <?php include "../components/navbar.php";?>
