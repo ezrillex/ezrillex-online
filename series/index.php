@@ -1,22 +1,35 @@
+<?php session_start();
+    if(!isset($_SESSION["UserId"])){
+        header("Location: /pages/accounts/login.php?mensaje_alerta=usernotregistered");
+    }
+?>
+<!DOCTYPE html>
 <html lang="es-sv">
 <head>
-    <title>Ezrillex Online</title>
-    <?php include '../components/stylesheets.html' ?>
+    <?php   include '../components/head.html';
+    include '../components/stylesheets.html' ?>
 </head>
 <body>
 <?php include "../components/navbar.php";?>
 
 <div class="container">
-    <br>
-    <div class="alert alert-danger" role="alert">
-        <h4 class="alert-heading">No disponible para usuarios no registrados.</h4>
-        <p>Puedes iniciar el proceso del registro en <a href="/cuenta/MiCuenta.php">Mi Cuenta</a></p>
-        <hr>
-        <p class="mb-0">La solicitud de una cuenta sera aprobado de manera manual por lo que puede tardarse entre 1 a 7 dias en procesar.</p>
-    </div>
-    <br>
-    <div class="jumbotron">
-        <h1 class="text-center">Series</h1>
+
+    <div>
+        <br>
+        <h1 class="text-center display-1">Series</h1>
+        <br>
+        <div class="card-columns">
+            <?php
+            include '../components/db.php';
+            $query = "select * from series";
+            $resultado = mysqli_query($conn, $query);
+            while($row=mysqli_fetch_array($resultado)){
+                echo    '<a class="card d-inline-block" href=ver.php?id=' . $row["SeriesId"] . '>';
+                echo    '<img class="card-img-top" src="posters/' . $row["SeriesPosterFileName"] . '" alt="Poster de ' . $row["SeriesName"] . '">';
+                echo    '<h5 class="card-title text-center pt-2">' . $row["SeriesName"] .'</h5></a>';
+            }
+            ?>
+        </div>
     </div>
 </div>
 <?php include '../components/footer.php' ?>

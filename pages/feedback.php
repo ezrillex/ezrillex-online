@@ -64,7 +64,7 @@
 <?php include '../components/scripts.html' ?>
 <script src="post_comment_sender.js" type="application/javascript"></script>
 <script>
-    lc(4);
+    activate("navretro");
 </script>
 </body>
 </html>

@@ -1,7 +1,0 @@
-CREATE TABLE `comments`(
-    id int PRIMARY KEY,
-    alias varchar(50) not null,
-    comm varchar (1000) not null,
-    posted timestamp not null
-)
-
