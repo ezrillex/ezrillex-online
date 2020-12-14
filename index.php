@@ -19,6 +19,13 @@
     <?php include 'components/footer.php' ?>
     <?php include 'components/scripts.html' ?>
 
+    <form action="">
+        <button type="submit" class="btn btn-primary">
+            Enviar Correo de Prueba
+        </button>
+
+    </form>
+
 
     <script>
         activate("#navinicio");
