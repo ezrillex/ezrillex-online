@@ -15,7 +15,7 @@
         <address>
             El Salvador, San Salvador. <br/>
             Email: <a href="mailto:ezra@ezrillex.online">ezra@ezrillex.online</a> <br/>
-            Discord: Ezra#3905 <br/>
+            Discord: ezra#3905 <br/>
             Estudiante de Licenciatura en Informática. <br/>
             Bilingüe (Ingles-Español).<br/>
             C#, Python, Beginner Fullstack. <br/>

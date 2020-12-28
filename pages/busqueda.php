@@ -1,3 +1,6 @@
+<?php
+header("Location: /index.php");
+?>
 <html>
 <head>
     <title>Ezrillex Online</title>

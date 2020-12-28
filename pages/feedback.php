@@ -1,3 +1,4 @@
+<?php header("Location: /index.php"); // REDIRECT TO MAINPAGE ?>
 <html>
 <head>
     <title>Ezrillex Online</title>

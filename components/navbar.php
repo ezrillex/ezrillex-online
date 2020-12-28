@@ -12,20 +12,17 @@
                 <a id="navinicio" class="nav-link" href="/index.php">Inicio</a>
             </li>
 
-            <?php if(isset($_SESSION["UserId"])){ ?>
+<!--            --><?php //if(isset($_SESSION["UserId"])){ ?>
                 <li class="nav-item">
                     <a id="navseries" class="nav-link" href="/series/index.php">Series</a>
                 </li>
-            <?php } ?>
+<!--            --><?php //} ALLOW EVERYONE FOR NOW ?>
 
             <li class="nav-item">
                 <a id="navcontacto" class="nav-link"  href="/legacy/info.php">Contacto</a>
             </li>
             <li class="nav-item">
                 <a id="navchangelog" class="nav-link" href="/legacy/changelog.php">Changelog</a>
-            </li>
-            <li class="nav-item">
-                <a id="navretro" class="nav-link" href="/pages/feedback.php">Comentarios</a>
             </li>
 
             <?php if(isset($_SESSION["UserId"])){ ?>
@@ -36,15 +33,15 @@
                     <a id="navcerrarsesion" class="nav-link" href="/components/login/logout.php">Cerrar Sesión</a>
                 </li>
             <?php } else { ?>
-                <li class="nav-item">
-                    <a id="navIngresar" class="nav-link" href="/pages/accounts/login.php">Iniciar Sesión</a>
-                </li>
+<!--                <li class="nav-item">-->
+<!--                    <a id="navIngresar" class="nav-link" href="/pages/accounts/login.php">Iniciar Sesión</a>-->
+<!--                </li>-->
             <?php } ?>
 
         </ul>
-        <form action="/pages/busqueda.php" method="get" class="form-inline my-2 my-lg-0">
-            <input name="busqueda" class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
-            <button class="btn btn-dark  my-2 my-sm-0" type="submit">Buscar</button>
-        </form>
+<!--        <form action="/pages/busqueda.php" method="get" class="form-inline my-2 my-lg-0">-->
+<!--            <input name="busqueda" class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">-->
+<!--            <button class="btn btn-dark  my-2 my-sm-0" type="submit">Buscar</button>-->
+<!--        </form>-->
     </div>
 </nav>

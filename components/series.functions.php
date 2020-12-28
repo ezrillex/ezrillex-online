@@ -1,9 +1,9 @@
 <?php
-function DoesSeriesExists($id){
+function ExecutePreparedQueryBoolFromInt($query, $id): bool
+{
     include 'db.php'; // include database connection
-    $sql = "select count(*) as c from series where SeriesId=?"; // declare query
     $stmt = mysqli_stmt_init($conn); // initialize statement with the database connection
-    if(!mysqli_stmt_prepare($stmt, $sql)){ // prepare the statement given the initialized statement and the query
+    if(!mysqli_stmt_prepare($stmt, $query)){ // prepare the statement given the initialized statement and the query
         die("Internal Error 500");
     }
     else {
@@ -27,7 +27,30 @@ function DoesSeriesExists($id){
     }
 }
 
-function GetSeriesData($id){
+
+function DoesSeriesExists($id): bool
+{
+    return ExecutePreparedQueryBoolFromInt("select count(*) as c from series where SeriesId=?", $id);
+}
+
+function GetEpisodeData($ep_id): ?array
+{
+    include 'db.php';
+    $sql = "select * from episodes where EpisodeId=?";
+    $stmt = mysqli_stmt_init($conn);
+    mysqli_stmt_prepare($stmt, $sql);
+    mysqli_stmt_bind_param($stmt, "i", $ep_id);
+    mysqli_stmt_execute($stmt);
+
+    $result = mysqli_stmt_get_result($stmt);
+    mysqli_stmt_close($stmt);
+
+    return mysqli_fetch_array($result); // returns null if nothing was fetched
+}
+
+
+function GetSeriesData($id): ?array
+{
     include 'db.php';
     $sql = "select * from series where SeriesId=?";
     $stmt = mysqli_stmt_init($conn);
@@ -38,8 +61,14 @@ function GetSeriesData($id){
     $result = mysqli_stmt_get_result($stmt);
     mysqli_stmt_close($stmt);
 
-    $data = mysqli_fetch_array($result); // returns null if nothing was fetched
-
-    return $data;
+    return mysqli_fetch_array($result); // returns null if nothing was fetched
 }
-?>
+
+function DoesEpisodeExist($id): bool
+{
+    return ExecutePreparedQueryBoolFromInt("select count(*) as c from episodes where EpisodeId=?", $id);
+}
+
+
+
+
