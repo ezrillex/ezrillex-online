@@ -1,7 +1,7 @@
 <?php session_start();
-    if(!isset($_SESSION["UserId"])){
-        header("Location: /pages/accounts/login.php?mensaje_alerta=usernotregistered");
-    }
+//    if(!isset($_SESSION["UserId"])){
+//        header("Location: /pages/accounts/login.php?mensaje_alerta=usernotregistered");
+//    }
 ?>
 <!DOCTYPE html>
 <html lang="es-sv">
@@ -24,7 +24,7 @@
             $query = "select * from series";
             $resultado = mysqli_query($conn, $query);
             while($row=mysqli_fetch_array($resultado)){
-                echo    '<a class="card d-inline-block" href=ver.php?id=' . $row["SeriesId"] . '>';
+                echo    '<a class="card d-inline-block" href=list.php?id=' . $row["SeriesId"] . ';>';
                 echo    '<img class="card-img-top" src="posters/' . $row["SeriesPosterFileName"] . '" alt="Poster de ' . $row["SeriesName"] . '">';
                 echo    '<h5 class="card-title text-center pt-2">' . $row["SeriesName"] .'</h5></a>';
             }

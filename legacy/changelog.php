@@ -15,14 +15,15 @@
         <ul>
             <li>A blog.</li>
             <li>Something other than a gif on the homepage.</li>
+            <li>Account System</li>
+            <li>A comment section under each episode.</li>
+            <li>Next and Previous buttons under player</li>
         </ul>
 
         <h4>v0.4.0</h4>
         <ul>
             <li>Rewrite in LAMP stack.</li>
-            <li>Feature parity.</li>
-            <li>Account System</li>
-            <li>A comment section.</li>
+            <li>Removed fate content. Lack of space for a behemoth of a franchise.</li>
         </ul>
 
         <h4>v0.3.3</h4>

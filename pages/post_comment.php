@@ -1,4 +1,6 @@
 <?php
+header("Location: /index.php");
+
 $alias = $_POST["alias"];
 $comment = $_POST["comment"];
 
