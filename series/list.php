@@ -27,7 +27,7 @@ if(DoesSeriesExists($idserie) == false){
 $metadata = GetSeriesData($idserie);
 
 include dirname(__DIR__) . '/components/db.php';
-$q1 = 'select * from episodes where EpisodeSeries='.$metadata["SeriesId"].' order by episodeorder';
+$q1 = 'select * from Episodes where EpisodeSeries='.$metadata["SeriesId"].' order by EpisodeOrder';
 
 ?>
 

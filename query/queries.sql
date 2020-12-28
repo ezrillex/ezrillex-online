@@ -44,7 +44,7 @@ insert into Users(username, useremail, userpassword, registerdate, lastlogin)
 value ('debug', 'debug@debug.con', '$2y$10$t8dNwXNTzCGJ4LgqQ8RsA.gv.oTre9RoLQqxY2ebBe90ncxZBn5K6', CURRENT_TIMESTAMP, current_timestamp);
 
 -- this order is important because episode series on the series table depends on the id which is based on this order.
-insert into series(seriesname, seriesquote, seriesquoteauthor, seriessynopsis, seriesposterfilename, seriescustomtitlefont)
+insert into Series(seriesname, seriesquote, seriesquoteauthor, seriessynopsis, seriesposterfilename, seriescustomtitlefont)
 values ('Steins;Gate', 'El Psy Congroo', 'Okabe Rintaro', 'Epica historia de Viajes en el Tiempo', 'steinsgate.jpg', 'NanumMyeongjo'),
        ('Erased', 'Todo lo que se avecina aún está por determinar. El fin está en algún lugar lejano del futuro y es desconocido.', 'Airi Katagiri', 'Un hombre de repente regresa al pasado y debe descubrir quien fue el culpable de los asesinatos de niños que sucedieron hace muchos años', 'erased.jpg', '');
 

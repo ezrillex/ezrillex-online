@@ -36,7 +36,7 @@ function DoesSeriesExists($id): bool
 function GetEpisodeData($ep_id): ?array
 {
     include 'db.php';
-    $sql = "select * from episodes where EpisodeId=?";
+    $sql = "select * from Episodes where EpisodeId=?";
     $stmt = mysqli_stmt_init($conn);
     mysqli_stmt_prepare($stmt, $sql);
     mysqli_stmt_bind_param($stmt, "i", $ep_id);
@@ -52,7 +52,7 @@ function GetEpisodeData($ep_id): ?array
 function GetSeriesData($id): ?array
 {
     include 'db.php';
-    $sql = "select * from series where SeriesId=?";
+    $sql = "select * from Series where SeriesId=?";
     $stmt = mysqli_stmt_init($conn);
     mysqli_stmt_prepare($stmt, $sql);
     mysqli_stmt_bind_param($stmt, "i", $id);
@@ -66,7 +66,7 @@ function GetSeriesData($id): ?array
 
 function DoesEpisodeExist($id): bool
 {
-    return ExecutePreparedQueryBoolFromInt("select count(*) as c from episodes where EpisodeId=?", $id);
+    return ExecutePreparedQueryBoolFromInt("select count(*) as c from Episodes where EpisodeId=?", $id);
 }
 
 

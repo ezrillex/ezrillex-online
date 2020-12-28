@@ -21,7 +21,7 @@
         <div class="card-columns">
             <?php
             include '../components/db.php';
-            $query = "select * from series";
+            $query = "select * from Series";
             $resultado = mysqli_query($conn, $query);
             while($row=mysqli_fetch_array($resultado)){
                 echo    '<a class="card d-inline-block" href=list.php?id=' . $row["SeriesId"] . ';>';
