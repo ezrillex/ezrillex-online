@@ -53,23 +53,60 @@
             <a class="btn btn-outline-dark " href="list.php?id=<?php echo $metadata[0] ?>;">Regresar a Lista</a>
         </div>
 
+        <div class="d-flex justify-content-center align-items-center mt-3  row">
+            
 
+            <?php
+                //print_r($episodeData);
+                echo "<br><br>";
+                //print_r($metadata);
 
-<!--        <div class="d-flex justify-content-center align-items-center mt-3  row">-->
-<!--            <button type="button" class="btn btn-dark bg-black m-2">Anterior</button>-->
-<!--            <button type="button" class="btn btn-dark bg-black m-2">Siguiente</button>-->
-<!--        </div>-->
-<!--        <div class="d-flex justify-content-center align-items-center mt-3  row">-->
-<!--            <select class="custom-select w-auto">-->
-<!--                --><?php
-//                    $result = mysqli_query($conn, $q1);
-//                    while($data = mysqli_fetch_array($result)){
-//                        echo"<option value=".$data[0].">".$data[1]."</option>";
-//                    }
-//                ?>
-<!--            </select>-->
-<!---->
-<!--        </div>-->
+                $q2 = "select * from episodes where EpisodeSeries=? and EpisodeOrder=?";
+                $next_episode = $episodeData[3] + 1;
+                $previous_episode = $episodeData[3] - 1;
+                
+                $stmt = mysqli_stmt_init($conn);
+                
+                mysqli_stmt_prepare($stmt, $q2);
+                mysqli_stmt_bind_param($stmt, "ii", $episodeData[4], $next_episode );
+                mysqli_stmt_execute($stmt);
+            
+                $result = mysqli_stmt_get_result($stmt);
+                $next_episode = mysqli_fetch_array($result);
+                mysqli_stmt_close($stmt);
+
+                //print_r( $result_data);
+            
+               
+                
+                $stmt = mysqli_stmt_init($conn);
+                
+                mysqli_stmt_prepare($stmt, $q2);
+                mysqli_stmt_bind_param($stmt, "ii", $episodeData[4], $previous_episode );
+                mysqli_stmt_execute($stmt);
+            
+                $result = mysqli_stmt_get_result($stmt);
+                $previous_episode = mysqli_fetch_array($result);
+                mysqli_stmt_close($stmt);
+         
+                if( $previous_episode !== null){
+                    ?> 
+                        <a href="/series/ver.php?id=<?php echo $previous_episode[0] ?>" type="button" class="btn btn-dark bg-black m-2">Anterior</a>
+                    <?php
+                }
+
+                if( $next_episode !== null){
+                    ?> 
+                        <a href="/series/ver.php?id=<?php echo $next_episode[0] ?>" type="button" class="btn btn-dark bg-black m-2">Siguiente</a>
+                    <?php
+                }
+
+            ?>
+
+    
+           
+       </div>
+       
 
     </div>
 </div>

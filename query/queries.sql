@@ -65,7 +65,7 @@ values ('1: Ráfagas ante mis ojos', 'erased/1', 1, 2),
 insert into Episodes(episodename, episodesource, episodeorder, episodeseries)
 values ('1: Prólogo del principio y el fin', 'sgf/sg/1',1,1),
        ('2: Paranoia de viajes en el tiempo', 'sgf/sg/2',2,1),
-       ('3: Paranoia de procesos paralelos', 'sgf/sg/3',2,1),
+       ('3: Paranoia de procesos paralelos', 'sgf/sg/3',3,1),
        ('4: Encuentro de fluctuaciones abstractas', 'sgf/sg/4',4,1),
        ('5: Encuentro de cargas eléctricas en conflicto', 'sgf/sg/5',5,1),
        ('6: Divergencia del efecto mariposa', 'sgf/sg/6',6,1),
