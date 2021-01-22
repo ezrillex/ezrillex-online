@@ -36,8 +36,8 @@
             echo '</div>';
 
 
-            include dirname(__DIR__) . '/components/db.php';
-            $q1 = 'select * from episodes where EpisodeId='.$episodeData[0];
+            include '../components/db.php';
+            //$q1 = 'select * from episodes where EpisodeId='.$episodeData[0];
 
             $ep_sauce = $episodeData[2];
         ?>
@@ -58,10 +58,11 @@
 
             <?php
                 //print_r($episodeData);
-                echo "<br><br>";
+                
+               
                 //print_r($metadata);
 
-                $q2 = "select * from episodes where EpisodeSeries=? and EpisodeOrder=?";
+                $q2 = "select * from Episodes where EpisodeSeries=? and EpisodeOrder=?";
                 $next_episode = $episodeData[3] + 1;
                 $previous_episode = $episodeData[3] - 1;
                 
@@ -105,7 +106,7 @@
 
     
            
-       </div>
+        </div>
        
 
     </div>
