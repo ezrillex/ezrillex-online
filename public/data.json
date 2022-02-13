@@ -1,0 +1,102 @@
+{
+    "series": [
+        {
+            "id":0,
+            "name": "Steins;Gate",
+            "poster": "steinsgate.jpg",
+            "quote":"El Psy Congroo",
+            "author":"Okabe Rintaro",
+            "episodes":[
+                {
+                    "order":1,
+                    "title": "Test",
+                    "magnet":"magnet:?xt=urn:btih:0026659030a846a98d2865a16c5bec4718011d97&dn=13.mp4&tr=wss%3A%2F%2Ftracker.btorrent.xyz&tr=wss%3A%2F%2Ftracker.openwebtorrent.com"
+                }
+            ]
+        },
+        {
+            "id":1,
+            "name": "Erased",
+            "poster": "erased.jpg",
+            "quote":"Todo lo que se avecina aún está por determinar. El fin está en algún lugar lejano del futuro y es desconocido.",
+            "author":"Airi Katagiri",
+            "episodes": [
+                {
+                    "order":0,
+                    "title": "1: Ráfagas ante mis ojos",
+                    "magnet":""
+                },
+                {
+                    "order": 1,
+                    "title": "2: Palmas",
+                    "magnet":""
+                },
+                {
+                    "order": 2,
+                    "title": "3: Moretones",
+                    "magnet":""
+                },
+                {
+                    "order": 3,
+                    "title": "4: Misión Cumplida",
+                    "magnet":""
+                },
+                {
+                    "order": 4,
+                    "title": "5: Huida",
+                    "magnet":""
+                },
+                {
+                    "order": 5,
+                    "title": "6: Shinigami",
+                    "magnet":""
+                },
+                {
+                    "order": 6,
+                    "title": "7: Perdiendo el control",
+                    "magnet":""
+                },
+                {
+                    "order": 7,
+                    "title": "8: Espiral",
+                    "magnet":""
+                },
+                {
+                    "order": 8,
+                    "title": "9: Desenlace",
+                    "magnet":""
+                },
+                {
+                    "order": 9,
+                    "title": "10: Placer",
+                    "magnet":""
+                },
+                {
+                    "order": 10,
+                    "title": "11: Futuro",
+                    "magnet":""
+                },
+                {
+                    "order": 11,
+                    "title": "12: Tesoro",
+                    "magnet":""
+                }
+            ]
+        },
+        {
+            "id":2,
+            "name": "Fate Unlimited Bladeworks",
+            "poster": "unlimitedbladeworks.jpg",
+            "quote":"People die when they are killed.",
+            "author":"Shirou Emiya",
+            "episodes":[
+                {
+                    "order":0,
+                    "title": "Test",
+                    "magnet":"magnet:?xt=urn:btih:ea508aa5622bb96469732b6f65d36b5c3be25a4e&dn=13.mp4&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=udp%3A%2F%2Fexplodie.org%3A6969&tr=udp%3A%2F%2Ftracker.empire-js.us%3A1337&tr=wss%3A%2F%2Ftracker.btorrent.xyz&tr=wss%3A%2F%2Ftracker.openwebtorrent.com"
+                }
+            ]
+        }
+    ]
+}
+
