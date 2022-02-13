@@ -38,7 +38,7 @@
                 {/if}
 
                 <div class="col text-center">
-                    <a class="btn btn-outline-dark " href="list.php?id=<?php echo $metadata[0] ?>;">Regresar a Lista</a>
+                    <a class="btn btn-outline-dark " href="#/series/{params.id}/">Regresar a Lista</a>
                 </div>
                 
                 {#if params.order + 1 < data.series[params.id].episodes.length}
