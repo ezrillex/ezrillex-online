@@ -1,33 +1,41 @@
-<main>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-black">
-        <img class="me-2 ms-2" src="/favicon.png" width="25" height="25" alt=""/>
-        <a class="navbar-brand" href="#/"> ezrillex online</a>
-    
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"> </span>
-        </button>
-    
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item ">
-                    <a id="navinicio" class="nav-link" href="#/">Inicio</a>
-                </li>
-    
-    
-                <li class="nav-item">
-                    <a id="navseries" class="nav-link" href="#/series">Series</a>
-                </li>
+<script>
+    import {
+        Collapse,
+        Navbar,
+        NavbarToggler,
+        NavbarBrand,
+        Nav,
+        NavItem,
+        NavLink,
+    } from "sveltestrap";
 
-    
-               
-                <li class="nav-item">
-                    <a id="navchangelog" class="nav-link" href="#/changelog">Changelog</a>
-                </li>
-    
-      
-    
-            </ul>
-  
-        </div>
-    </nav>
+    let isOpen = false;
+    const toggle = () => (isOpen = !isOpen);
+</script>
+
+<main>
+    <Navbar color="dark" dark class="bg-black">
+        <img
+            class="me-2 ms-2"
+            src="/favicon.png"
+            width="25"
+            height="25"
+            alt=""
+        />
+        <NavbarBrand href="#/" class="me-auto">ezrillex online</NavbarBrand>
+        <NavbarToggler on:click={toggle} class="me-2" />
+        <Collapse {isOpen} navbar>
+            <Nav navbar>
+                <NavItem>
+                    <NavLink href="#/">Inicio</NavLink>
+                </NavItem>
+                <NavItem>
+                    <NavLink href="#/series">Series</NavLink>
+                </NavItem>
+                <NavItem>
+                    <NavLink href="#/changelog">Changelog</NavLink>
+                </NavItem>
+            </Nav>
+        </Collapse>
+    </Navbar>
 </main>

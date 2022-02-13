@@ -8,9 +8,260 @@
             "author":"Okabe Rintaro",
             "episodes":[
                 {
+                    "order":0,
+                    "title": "1: Prólogo del principio y el fin",
+                    "magnet":""
+                },
+                {
                     "order":1,
-                    "title": "Test",
-                    "magnet":"magnet:?xt=urn:btih:0026659030a846a98d2865a16c5bec4718011d97&dn=13.mp4&tr=wss%3A%2F%2Ftracker.btorrent.xyz&tr=wss%3A%2F%2Ftracker.openwebtorrent.com"
+                    "title": "2: Paranoia de viajes en el tiempo",
+                    "magnet":""
+                },
+                {
+                    "order":2,
+                    "title": "3: Paranoia de procesos paralelos",
+                    "magnet":""
+                },
+                {
+                    "order":3,
+                    "title": "4: Encuentro de fluctuaciones abstractas",
+                    "magnet":""
+                },
+                {
+                    "order":4,
+                    "title": "5: Encuentro de cargas eléctricas en conflicto",
+                    "magnet":""
+                },
+                {
+                    "order":5,
+                    "title": "6: Divergencia del efecto mariposa",
+                    "magnet":""
+                },
+                {
+                    "order":6,
+                    "title": "7: Divergencia de la singularidad",
+                    "magnet":""
+                },
+                {
+                    "order":7,
+                    "title": "8: Homeoestasis de la teoría del caos",
+                    "magnet":""
+                },
+                {
+                    "order":8,
+                    "title": "9: Homeostasis de ilusiones",
+                    "magnet":""
+                },
+                {
+                    "order":9,
+                    "title": "10: Homeostasis de complementos",
+                    "magnet":""
+                },
+                {
+                    "order":10,
+                    "title": "11: Dogma de las fronteras espacio-tiempo",
+                    "magnet":""
+                },
+                {
+                    "order":11,
+                    "title": "12: Dogma de límites estáticos",
+                    "magnet":""
+                },
+                {
+                    "order":12,
+                    "title": "13: Necrosis metafísica",
+                    "magnet":""
+                },
+                {
+                    "order":13,
+                    "title": "14: Necrosis física",
+                    "magnet":""
+                },
+                {
+                    "order":14,
+                    "title": "15: Necrosis del eslabón perdido",
+                    "magnet":""
+                },
+                {
+                    "order":15,
+                    "title": "16: Necrosis irreversible",
+                    "magnet":""
+                },
+                {
+                    "order":16,
+                    "title": "17: Pretensión de distorsión compleja",
+                    "magnet":""
+                },
+                {
+                    "order":17,
+                    "title": "18: Andrógino de autosemejanza",
+                    "magnet":""
+                },
+
+                {
+                    "order":18,
+                    "title": "19: Apoptosis de cadena infinita",
+                    "magnet":""
+                },
+                {
+                    "order":19,
+                    "title": "20: Apoptosis de extinción del odio",
+                    "magnet":""
+                },
+                {
+                    "order":20,
+                    "title": "21: Fundición de la ley de causalidad",
+                    "magnet":""
+                },
+                {
+                    "order":21,
+                    "title": "22: Fundición de la comprensión existencial",
+                    "magnet":""
+                },
+                {
+                    "order":22,
+                    "title": "23β: Abre el Enlace Perdido",
+                    "magnet":""
+                },
+                {
+                    "order":23,
+                    "title": "1: Ultima Pieza del Aniquilador: Absolute Zero",
+                    "magnet":""
+                },
+                {
+                    "order":24,
+                    "title": "2: Epigraph of the Closed Curve: Closed Epigraph",
+                    "magnet":""
+                },
+                {
+                    "order":25,
+                    "title": "3: Protocol of the Two-sided Gospel: X-Day Protocol",
+                    "magnet":""
+                },
+                {
+                    "order":26,
+                    "title": "4: Solitude of the Mournful Flow: A Stray Sheep",
+                    "magnet":""
+                },
+                {
+                    "order":27,
+                    "title": "5: Solitude of the Astigmatism: Entangled Sheep",
+                    "magnet":""
+                },
+                {
+                    "order":28,
+                    "title": "6: Eclipse of Orbital Ordering: The Orbital Eclipse",
+                    "magnet":""
+                },
+                {
+                    "order":29,
+                    "title": "7: Eclipse of Vibronic Transition: Vibronic Transition",
+                    "magnet":""
+                },
+                {
+                    "order":30,
+                    "title": "8: Dual of Antinomy: Antinomic Dual",
+                    "magnet":""
+                },
+                {
+                    "order":31,
+                    "title": "9: Pandora of Eternal Return: Pandora''s Box",
+                    "magnet":""
+                },
+                {
+                    "order":32,
+                    "title": "9.5 (OVA): Especial San Valentin: Valentine''s of Crystal Polymorphism: Bittersweet Intermedio",
+                    "magnet":""
+                },
+                {
+                    "order":33,
+                    "title": "10: Pandora of Provable Existence: Forbidden Cubicle",
+                    "magnet":""
+                },
+                {
+                    "order":34,
+                    "title": "11: Pandora of Forgotten Existence: Sealed Reliquary",
+                    "magnet":""
+                },
+                {
+                    "order":35,
+                    "title": "12: Mother Goose of Mutual Recursion: Recursive Mother Goose",
+                    "magnet":""
+                },
+                {
+                    "order":36,
+                    "title": "13: Mother Goose of Diffractive Recitativo: Diffraction Mother Goose",
+                    "magnet":""
+                },
+                {
+                    "order":37,
+                    "title": "14: Recognition of the Elastic Limit: Presage or Recognize",
+                    "magnet":""
+                },
+                {
+                    "order":38,
+                    "title": "15: Recognition of the Asymptotic Line: Recognize Asymptote",
+                    "magnet":""
+                },
+                {
+                    "order":39,
+                    "title": "16: Altair of the Point at Infinity: Vega and Altair",
+                    "magnet":""
+                },
+                {
+                    "order":40,
+                    "title": "17: Altair of the Hyperbolic Plane: Beltrami Pseudosphere",
+                    "magnet":""
+                },
+                {
+                    "order":41,
+                    "title": "18: Altair of Translational Symmetry: Translational Symmetry",
+                    "magnet":""
+                },
+                {
+                    "order":42,
+                    "title": "19: Altair of the Cyclic Coordinate: Time-Leap Machine",
+                    "magnet":""
+                },
+                {
+                    "order":43,
+                    "title": "20: Rinascimento of the Unwavering Promise: Promised Rinascimento",
+                    "magnet":""
+                },
+                {
+                    "order":44,
+                    "title": "21: Rinascimento of Image Formation: Return of Phoenix",
+                    "magnet":""
+                },
+                {
+                    "order":45,
+                    "title": "22: Rinascimento of Projection: Project Amadeus",
+                    "magnet":""
+                },
+                {
+                    "order":46,
+                    "title": "23: Arclight of the Point at Infinity: Arclight of the Sky",
+                    "magnet":""
+                },
+                {
+                    "order":47,
+                    "title": "23: Steins Gate, plano en la frontera",
+                    "magnet":""
+                },
+                {
+                    "order":48,
+                    "title": "24: Prólogo del fin y el principio",
+                    "magnet":""
+                },
+                {
+                    "order":49,
+                    "title": "OVA: Poriomanía del egoísmo",
+                    "magnet":""
+                },
+                {
+                    "order":50,
+                    "title": "Película: El déjà vu del área de carga negativa",
+                    "magnet":""
                 }
             ]
         },
