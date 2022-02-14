@@ -14,7 +14,7 @@
             </div>
             <div class="row footer-copyright text-center mt-3 pb-2">
                 <div class="container-fluid">
-                    <span>ezrillex.online v0.5.0</span>
+                    <span>ezrillex.online v0.5.1</span>
                 </div>
             </div>
         </div>

@@ -32,13 +32,13 @@
         <Collapse {isOpen} navbar expand="md" on:update={handleUpdate}>
             <Nav navbar>
                 <NavItem>
-                    <NavLink href="#/">Inicio</NavLink>
+                    <NavLink on:click={toggle} href="#/">Inicio</NavLink>
                 </NavItem>
                 <NavItem>
-                    <NavLink href="#/series">Series</NavLink>
+                    <NavLink on:click={toggle} href="#/series">Series</NavLink>
                 </NavItem>
                 <NavItem>
-                    <NavLink href="#/changelog">Changelog</NavLink>
+                    <NavLink on:click={toggle} href="#/changelog">Changelog</NavLink>
                 </NavItem>
             </Nav>
         </Collapse>

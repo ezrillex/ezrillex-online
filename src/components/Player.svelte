@@ -1,28 +1,24 @@
 <script>
-    import TorrentVideoPlayer from "./TorrentVideoPlayer.svelte";
+    import VideoPlayer from "./VideoPlayer.svelte";
+    import AskDecrypt from "./AskDecrypt.svelte";
+    import dataStore from "../stores/dataStore";
 
     export let params;
 
-    const fetchData = (async () => {
-        const response = await fetch("/data.json");
-        return await response.json();
-    })();
 </script>
 
 <main>
-    {#await fetchData}
-        <p>Loading data...</p>
-    {:then data}
+    
         <div class="container">
-            
+            {#if !$dataStore.encrypted }
             <br />
 
             <div class="jumbotron">
-                <h1 class="text-center">{data.series[params.id].name}</h1>
+                <h1 class="text-center">{$dataStore.series[params.id].name}</h1>
             </div>
 
-            <TorrentVideoPlayer
-                magnet={data.series[params.id].episodes[params.order].magnet}
+            <VideoPlayer
+                url={ $dataStore.series[params.id].episodes[params.order].url}
             />
 
             <br>
@@ -41,16 +37,17 @@
                     <a class="btn btn-outline-dark " href="#/series/{params.id}/">Regresar a Lista</a>
                 </div>
                 
-                {#if params.order + 1 < data.series[params.id].episodes.length}
+                {#if parseInt(params.order) + 1 < $dataStore.series[params.id].episodes.length}
                     <a
-                        href="#/series/{params.id}/{params.order + 1}"
+                        href="#/series/{params.id}/{parseInt(params.order) + 1}"
                         type="button"
                         class="col btn btn-dark bg-black m-2">Siguiente</a
                     >
                 {/if}
             </div>
+            {:else}
+                <AskDecrypt></AskDecrypt>
+            {/if}
         </div>
-    {:catch error}
-        <p>An error occurred!</p>
-    {/await}
+  
 </main>

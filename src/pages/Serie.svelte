@@ -1,42 +1,41 @@
 <script>
-    import Episode from '../components/Episode.svelte';
+    import Episode from "../components/Episode.svelte";
+    import AskDecrypt from "../components/AskDecrypt.svelte";
+    import dataStore from "../stores/dataStore";
+    import {Button} from 'sveltestrap'
 
     export let params;
-
-
-    const fetchData = (async () => {
-        const response = await fetch("/data.json");
-        return await response.json();
-    })();
 </script>
 
 <main>
     <div class="container">
-        <br>
-        <div class="row">
-            {#await fetchData}
-                <p>Loading data...</p>
-            {:then data}
+        {#if !$dataStore.encrypted}
+            <br />
+            <div class="row">
                 <div class="col-sm-4">
                     <div>
-                        <img class="img-fluid" src="images/posters/{data.series[params.id].poster}" alt="Poster de {data.series[params.id].name}"/>
+                        <img
+                            class="img-fluid"
+                            src="images/posters/{$dataStore.series[params.id]
+                                .poster}"
+                            alt="Poster de {$dataStore.series[params.id].name}"
+                        />
                     </div>
-        
+                    <br>
+                    <div class="d-flex justify-content-center">
+                        <Button href="#/series/" color="dark">Volver a Series</Button>
+                    </div>
                 </div>
                 <div class="col-sm-8">
                     <div>
-                        {#each data.series[params.id].episodes as episode}
+                        {#each $dataStore.series[params.id].episodes as episode}
                             <Episode {episode} {params} />
                         {/each}
                     </div>
                 </div>
-            {:catch error}
-                <p>An error occurred!</p>
-            {/await}
-        </div>
-
+            </div>
+        {:else}
+            <AskDecrypt />
+        {/if}
     </div>
-    
-    
-    
 </main>

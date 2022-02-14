@@ -12,16 +12,8 @@
 	import Navbar from './components/layout/navbar.svelte';
 	import Footer from './components/layout/footer.svelte';
 
-	export let name;
-
-
 	const routes = {
-		'/': wrap({
-			component: Home,
-			props: {
-				name
-			}
-		}),
+		'/': Home,
 
 		'/series': Series,
 
@@ -33,9 +25,6 @@
 
 		'*': NotFoundPage
 	}
-
-
-
 
 </script>
 
