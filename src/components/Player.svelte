@@ -5,6 +5,7 @@
 
     export let params;
 
+  
 </script>
 
 <main>
@@ -17,9 +18,12 @@
                 <h1 class="text-center">{$dataStore.series[params.id].name}</h1>
             </div>
 
-            <VideoPlayer
-                url={ $dataStore.series[params.id].episodes[params.order].url}
-            />
+            {#key $dataStore.series[params.id].episodes[params.order].url }
+                <VideoPlayer
+                    url={ $dataStore.series[params.id].episodes[params.order].url}
+                />
+            {/key}
+            
 
             <br>
             
