@@ -1,0 +1,11 @@
+{
+  "name": "website-backend",
+  "version": "1.0.0",
+  "description": "the website backend",
+  "main": "server.js",
+  "author": "ezrillex",
+  "license": "No license",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
