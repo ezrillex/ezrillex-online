@@ -20,7 +20,7 @@
 
             <h4>[Unreleased] v0.5.4</h4>
             <ul>
-                <li>Setup deployment automatization with GitHub actions.</li>
+                <li>Automatized deployment with GitHub actions.</li>
                 <li>Next episode autoplays.</li>
                 <li>Deploy F/SN: 2005</li>
             </ul>
