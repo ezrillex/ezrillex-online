@@ -1,18 +1,40 @@
-<main>
+<script>
+    import {fade} from 'svelte/transition'
+</script>
+<main in:fade="{{duration: 500}}"> 
     <div class="container">
         <br>
         <div class="jumbotron">
             <h4>[Unreleased] v0.6.0</h4>
             <ul>
                 <li>A blog.</li>
-                <li>Something other than a gif on the homepage.</li>
                 <li>Account System</li>
                 <li>A comment section under each episode.</li>
             </ul>
 
-            <h4>[Unreleased] v0.5.2</h4>
+            <h4>[Unreleased] v0.5.5</h4>
             <ul>
-                <li>Deploy Erased series.</li>
+                <li>Polish UI, most was just ported from bootstrap 4 to bootstrap 5 without major tweaks.</li>
+                <li>Deploy Gravity Falls</li>
+            </ul>
+
+            <h4>[Unreleased] v0.5.4</h4>
+            <ul>
+                <li>Setup deployment automatization with GitHub actions.</li>
+                <li>Next episode autoplays.</li>
+                <li>Deploy F/SN: 2005</li>
+            </ul>
+
+            <h4>v0.5.3</h4>
+            <ul>
+                <li>Reworked encryption, key is required only once and is saved to localStorage. </li>
+                <li>Deployed Heavens Feel</li>
+                <li>Add some transition effects.</li>
+            </ul>
+
+            <h4>v0.5.2</h4>
+            <ul>
+                <li>Something other than a gif on the homepage.</li>
                 <li>Deploy Steins;Gate series.</li>
             </ul>
 

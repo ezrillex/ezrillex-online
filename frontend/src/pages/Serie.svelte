@@ -1,19 +1,19 @@
 <script>
     import Episode from "../components/Episode.svelte";
-    import AskDecrypt from "../components/AskDecrypt.svelte";
+    import AskDecrypt from "../components/encryption/AskDecrypt.svelte";
     import dataStore from "../stores/dataStore";
     import {Button} from 'sveltestrap'
-
+    import {fade} from 'svelte/transition'
     export let params;
 </script>
 
-<main>
+<main in:fade="{{duration: 500}}">
     <div class="container">
         {#if !$dataStore.encrypted}
             <br />
             <div class="row">
                 <div class="col-sm-4">
-                    <div>
+                    <div class="text-center">
                         <img
                             class="img-fluid"
                             src="images/posters/{$dataStore.series[params.id]

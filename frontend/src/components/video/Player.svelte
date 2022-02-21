@@ -1,14 +1,15 @@
 <script>
+    import {fade} from 'svelte/transition'
     import VideoPlayer from "./VideoPlayer.svelte";
-    import AskDecrypt from "./AskDecrypt.svelte";
-    import dataStore from "../stores/dataStore";
+    import AskDecrypt from "../encryption/AskDecrypt.svelte";
+    import dataStore from "../../stores/dataStore";
 
     export let params;
 
   
 </script>
 
-<main>
+<main in:fade="{{duration: 500}}">
     
         <div class="container">
             {#if !$dataStore.encrypted }

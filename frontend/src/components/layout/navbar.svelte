@@ -27,7 +27,7 @@
             height="25"
             alt=""
         />
-        <NavbarBrand href="#/" class="me-auto">ezrillex online</NavbarBrand>
+        <NavbarBrand href="#/" class="me-auto">Ezra Abarca</NavbarBrand>
         <NavbarToggler  on:click={toggle} class="me-2" />
         <Collapse {isOpen} navbar expand="md" on:update={handleUpdate}>
             <Nav navbar>

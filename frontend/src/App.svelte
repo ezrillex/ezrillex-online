@@ -7,7 +7,7 @@
 	import Changelog from './pages/Changelog.svelte'
 	import Series from './pages/Series.svelte'
 	import Serie from './pages/Serie.svelte'
-	import Player from './components/Player.svelte'
+	import Player from './components/video/Player.svelte'
 
 	import Navbar from './components/layout/navbar.svelte';
 	import Footer from './components/layout/footer.svelte';
