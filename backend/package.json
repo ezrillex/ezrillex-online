@@ -6,6 +6,8 @@
   "author": "ezrillex",
   "license": "No license",
   "dependencies": {
-    "express": "^4.17.3"
+    "body-parser": "^1.19.2",
+    "express": "^4.17.3",
+    "express-validator": "^6.14.0"
   }
 }
