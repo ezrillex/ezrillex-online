@@ -50,9 +50,7 @@ app.get(prefix + '/comments/:serie/:episode', (req, res) => {
 
 
     res.status = 200;
-    res.send(JSON.stringify({
-        "data": comments[key] || []
-    }));
+    res.send(comments[key] || []);
 });
 
 /*
