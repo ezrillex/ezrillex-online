@@ -2,15 +2,15 @@ on:
   push:
     branches: 
       - master
-name: 🚀 Deploy frontend on push
+name: 🚀 Deploy on push
 jobs:
   web-deploy:
-    name: 🎉 Deploy
+    name: 🎉 Deploy to FTP
     runs-on: ubuntu-latest
     steps:
     - name: 🚚 Get latest code
       uses: actions/checkout@v2
-    - name: 📂 Sync files
+    - name: 📂 Sync frontend files
       uses: SamKirkland/FTP-Deploy-Action@4.3.0
       with:
         server: ${{ secrets.server_ip }}
@@ -18,4 +18,12 @@ jobs:
         password: ${{ secrets.ftp_password }}
         server-dir: /
         local-dir: ./frontend/public/
+    - name: 📂 Sync backend files
+      uses: SamKirkland/FTP-Deploy-Action@4.3.0
+      with:
+        server: ${{ secrets.server_ip }}
+        username: ${{ secrets.backend_ftp_user }}
+        password: ${{ secrets.backend_ftp_password }}
+        server-dir: /v1/
+        local-dir: ./backend/
       
