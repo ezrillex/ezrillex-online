@@ -7,35 +7,34 @@
         <div class="jumbotron">
             <h4>[Unreleased] v0.6.0</h4>
             <ul>
-                <li>A blog.</li>
-                <li>Account System</li>
                 <li>A comment section under each episode.</li>
+                <li>Automate backend deployment with GitHub actions.</li>
             </ul>
 
             <h4>[Unreleased] v0.5.5</h4>
             <ul>
-                <li>Polish UI, most was just ported from bootstrap 4 to bootstrap 5 without major tweaks.</li>
-                <li>Deploy Gravity Falls</li>
+                <li>Chat page, experimenting with socket.io</li>
             </ul>
 
-            <h4>[Unreleased] v0.5.4</h4>
+            <h4>v0.5.4</h4>
             <ul>
-                <li>Automated deployment with GitHub actions.</li>
+                <li>Automated frontend deployment with GitHub actions.</li>
+                <li>Mark and save to localStorage if an episode was viewed, display on list as an eye.</li>
                 <li>Next episode autoplays.</li>
-                <li>Deploy F/SN: 2005</li>
+                <li>Deployed F/SN: 2006</li>
             </ul>
 
             <h4>v0.5.3</h4>
             <ul>
                 <li>Reworked encryption, key is required only once and is saved to localStorage. </li>
-                <li>Deployed Heavens Feel</li>
+                <li>Deployed Heavens Feel.</li>
                 <li>Add some transition effects.</li>
             </ul>
 
             <h4>v0.5.2</h4>
             <ul>
                 <li>Something other than a gif on the homepage.</li>
-                <li>Deploy Steins;Gate series.</li>
+                <li>Deployed Steins;Gate</li>
             </ul>
 
             <h4>v0.5.1</h4>

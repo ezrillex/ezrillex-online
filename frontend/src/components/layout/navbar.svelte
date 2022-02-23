@@ -19,26 +19,26 @@
 </script>
 
 <main>
-    <Navbar color="dark" dark class="bg-black" expand="md">
+    <Navbar color="dark" dark class="bg-black d-flex justify-content-start align-items-center" expand="md">
         <img
-            class="me-2 ms-2"
+            class="me-2 ms-2 "
             src="/favicon.png"
-            width="25"
-            height="25"
+            width="25rem"
+            height="auto"
             alt=""
         />
-        <NavbarBrand href="#/" class="me-auto">Ezra Abarca</NavbarBrand>
-        <NavbarToggler  on:click={toggle} class="me-2" />
+        <NavbarBrand href="#/" class="me-2 p-0 ">Ezra Abarca</NavbarBrand>
+        <NavbarToggler  on:click={toggle} class="me-2 pt-0 pb-0" />
         <Collapse {isOpen} navbar expand="md" on:update={handleUpdate}>
             <Nav navbar>
-                <NavItem>
-                    <NavLink on:click={toggle} href="#/">Inicio</NavLink>
+                <NavItem class="me-2" > 
+                    <NavLink class="p-0" on:click={toggle} href="#/">Inicio</NavLink>
                 </NavItem>
-                <NavItem>
-                    <NavLink on:click={toggle} href="#/series">Series</NavLink>
+                <NavItem class="me-2" >
+                    <NavLink class="p-0" on:click={toggle} href="#/series">Series</NavLink>
                 </NavItem>
-                <NavItem>
-                    <NavLink on:click={toggle} href="#/changelog">Changelog</NavLink>
+                <NavItem class="me-2" >
+                    <NavLink class="p-0" on:click={toggle} href="#/changelog">Changelog</NavLink>
                 </NavItem>
             </Nav>
         </Collapse>

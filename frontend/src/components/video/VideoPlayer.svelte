@@ -1,16 +1,37 @@
 <script>
+    import {fade } from 'svelte/transition'
+    import {createEventDispatcher} from 'svelte'
+
+    let time=0;
+    let duration;
+    let marked_as_complete = false;
+    export let tracker;
+
+    const dispatch = createEventDispatcher();
+
     export let url;
 
     if(url == ""){
-        //url = "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=A03A8966D3E08B51%21315908&authkey=ALj0duenWghHZoQ"
-        url = "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21316525&authkey=AOqXboKjS3UWqeg"
+        url = "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=A03A8966D3E08B51%21315908&authkey=ALj0duenWghHZoQ"
     }
+
+    function videoEnded(){
+        dispatch('episodeEnded');
+    }
+
+    $: {
+        if(time/duration > 0.9){
+            marked_as_complete = true;
+            localStorage.setItem(tracker, true);
+        }
+    }
+
 </script>
 
-<main>
+<main in:fade="{{duration: 500}}">
     <div class="ratio ratio-16x9">
         <!-- svelte-ignore a11y-media-has-caption -->
-        <video id="player" controls autoplay>
+        <video bind:currentTime={time} bind:duration on:ended={videoEnded} id="player" controls autoplay>
             <source type="video/mp4" src="{url}"/>
         </video>
     </div>
