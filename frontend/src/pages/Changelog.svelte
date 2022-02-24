@@ -7,13 +7,15 @@
         <div class="jumbotron">
             <h4>[Unreleased] v0.6.0</h4>
             <ul>
-                <li>A comment section under each episode.</li>
-                <li>Automate backend deployment with GitHub actions.</li>
+                <li>Chat page, experimenting with socket.io</li>
             </ul>
 
-            <h4>[Unreleased] v0.5.5</h4>
+            <h4>v0.5.5</h4>
             <ul>
-                <li>Chat page, experimenting with socket.io</li>
+                <li>Added a comment section under each episode.</li>
+                <li>Automate backend deployment with GitHub actions.</li>
+                <li>Developed a comments backend for the site using Express</li>
+                <li>Due to comments being for password side of the site, a database is not yet used. </li>
             </ul>
 
             <h4>v0.5.4</h4>

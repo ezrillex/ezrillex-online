@@ -6,30 +6,22 @@
 </script>
 
 <main in:fade={{ duration: 500 }}>
-    <div class="container">
+    <div class="container mt-4">
         {#if !$dataStore.encrypted}
-            <div>
-                <br />
-                <h1 class="text-center display-1">Series</h1>
-                <br />
-                <div class="card-columns row-cols-3">
-                    {#each $dataStore.series as serie}
-                        <a
-                            class="card d-inline-block m-3"
-                            href="#/series/{serie.id}"
-                        >
-                            <!-- link is to episode list -->
-                            <img
-                                class="card-img-top"
-                                src="images/posters/{serie.poster}"
-                                alt="Poster de {serie.name}"
-                            />
-                            <h5 class="card-title text-center pt-2">
-                                {serie.name}
-                            </h5></a
-                        >
-                    {/each}
-                </div>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                {#each $dataStore.series as { id, poster, name }}
+                    <div class="col">
+                        <a class="card d-inline-block m-3" href="#/series/{id}">
+                            <div class="card">
+                                <img
+                                    src="images/posters/{poster}"
+                                    class="card-img-top"
+                                    alt="..."
+                                />
+                            </div>
+                        </a>
+                    </div>
+                {/each}
             </div>
         {:else}
             <AskDecrypt />

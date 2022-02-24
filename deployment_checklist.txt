@@ -1,0 +1,4 @@
+[ ] Write release notes in changelog.svelte
+[ ] Change version in footer.svelte
+[ ] Stop server if there is new node packages
+[ ] Change back api endpoints if they were swapped to localhost for testing

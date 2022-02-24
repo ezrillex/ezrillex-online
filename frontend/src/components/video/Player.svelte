@@ -4,6 +4,7 @@
     import AskDecrypt from "../encryption/AskDecrypt.svelte";
     import dataStore from "../../stores/dataStore";
     import { push } from "svelte-spa-router";
+import Comments from "./comments.svelte";
 
     export let params;
 
@@ -60,6 +61,9 @@
                     >
                 {/if}
             </div>
+            {#key params}
+                <Comments {params} />
+            {/key}
         {:else}
             <AskDecrypt />
         {/if}

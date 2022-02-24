@@ -1,24 +1,37 @@
 const { body } = require('express-validator')
 const bodyParser = require('body-parser')
+const fs = require('fs')
 const express = require('express');
+const cron = require('node-cron');
+const { log } = require('console');
 const app = express();
 
 const PORT = process.env.PORT || 8000;
 
 var comments = {}
 
+try {
+    comments = JSON.parse( fs.readFileSync('comments.txt', 'utf8'))
+} catch (err) {
+    console.log("Error when loading comments from text:")
+    console.error(err)
+}
+
+cron.schedule('*/5 * * * *', (date) => {
+    console.log("Backing up comments - " + date)
+    fs.writeFileSync('comments.txt', JSON.stringify(comments))
+});
+
+
 var prefix = "";
 if (process.env.NODE_ENV !== undefined) {
     prefix = "/api/v1"
 }
-
+app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-
-
 
 app.post(
     prefix + '/comments/:serie/:episode',
-    body('text').not().isEmpty().trim().escape(),
     (req, res) => {
         var serie = 0;
         var episode = 0;
@@ -31,8 +44,8 @@ app.post(
         }
         const key = serie + "." + episode
         if (comments[key] === undefined) comments[key] = [];
-        comments[key].push({ "user": req.body.user, "comment": req.body.comment })
-        //console.log(comments)
+        
+        comments[key].unshift({ "user": req.body.user, "comment": req.body.comment })
         res.sendStatus(200)
     });
 
