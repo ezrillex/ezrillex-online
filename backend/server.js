@@ -4,6 +4,7 @@ const fs = require('fs')
 const express = require('express');
 const cron = require('node-cron');
 const { log } = require('console');
+const cors = require('cors')
 const app = express();
 
 const PORT = process.env.PORT || 8000;
@@ -29,6 +30,9 @@ if (process.env.NODE_ENV !== undefined) {
 }
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
+app.use(cors()) // enables cors on all origins
+
 
 app.post(
     prefix + '/comments/:serie/:episode',
