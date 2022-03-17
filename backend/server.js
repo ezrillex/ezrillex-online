@@ -1,9 +1,7 @@
-const { body } = require('express-validator')
 const bodyParser = require('body-parser')
 const fs = require('fs')
 const express = require('express');
 const cron = require('node-cron');
-const { log } = require('console');
 const cors = require('cors')
 const app = express();
 
@@ -48,7 +46,7 @@ app.post(
         }
         const key = serie + "." + episode
         if (comments[key] === undefined) comments[key] = [];
-        
+
         comments[key].unshift({ "user": req.body.user, "comment": req.body.comment })
         res.sendStatus(200)
     });
