@@ -12,7 +12,7 @@
     export let url;
 
     if(url == ""){
-        url = "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=A03A8966D3E08B51%21315908&authkey=ALj0duenWghHZoQ"
+        console.log("Received empty url, video load failed.");
     }
 
     function videoEnded(){

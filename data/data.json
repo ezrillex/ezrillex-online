@@ -1,0 +1,557 @@
+{
+    "encrypted": false,
+    "mykey": "[REDACTED]",
+    "series": [
+        {
+            "id": 0,
+            "name": "Steins;Gate",
+            "poster": "steinsgate.jpg",
+            "quote": "El Psy Congroo",
+            "author": "Okabe Rintaro",
+            "episodes": [
+                {
+                    "order": 0,
+                    "title": "1: Prólogo del principio y el fin",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21162302&authkey=AOeYMu0uK77r1F4"
+                },
+                {
+                    "order": 1,
+                    "title": "2: Paranoia de viajes en el tiempo",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21162301&authkey=AMr9BpvTpancZNo"
+                },
+                {
+                    "order": 2,
+                    "title": "3: Paranoia de procesos paralelos",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21162303&authkey=AKoIuKAm6g6EhPo"
+                },
+                {
+                    "order": 3,
+                    "title": "4: Encuentro de fluctuaciones abstractas",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21162304&authkey=ADb9UjXv3JF3wWw"
+                },
+                {
+                    "order": 4,
+                    "title": "5: Encuentro de cargas eléctricas en conflicto",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21162305&authkey=ABhEuoB5rJvfsok"
+                },
+                {
+                    "order": 5,
+                    "title": "6: Divergencia del efecto mariposa",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21162276&authkey=ANc-h9VvLpkpT4Y"
+                },
+                {
+                    "order": 6,
+                    "title": "7: Divergencia de la singularidad",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21162306&authkey=AMBYWZiv0NC5fvE"
+                },
+                {
+                    "order": 7,
+                    "title": "8: Homeoestasis de la teoría del caos",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21162307&authkey=ALVmV13at0uJUU0"
+                },
+                {
+                    "order": 8,
+                    "title": "9: Homeostasis de ilusiones",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21162309&authkey=ALH-TmxGOwJkksg"
+                },
+                {
+                    "order": 9,
+                    "title": "10: Homeostasis de complementos",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21162308&authkey=AFisYuthVXrwlfA"
+                },
+                {
+                    "order": 10,
+                    "title": "11: Dogma de las fronteras espacio-tiempo",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21162310&authkey=AM6F14bFKzlKPtQ"
+                },
+                {
+                    "order": 11,
+                    "title": "12: Dogma de límites estáticos",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21162311&authkey=AGImgfbOQe2cR7Q"
+                },
+                {
+                    "order": 12,
+                    "title": "13: Necrosis metafísica",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21162312&authkey=ANotrWD39w89zX0"
+                },
+                {
+                    "order": 13,
+                    "title": "14: Necrosis física",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21162313&authkey=AKZA0at_4FLVVvE"
+                },
+                {
+                    "order": 14,
+                    "title": "15: Necrosis del eslabón perdido",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21162314&authkey=AI-w9ZtqrZVg2jk"
+                },
+                {
+                    "order": 15,
+                    "title": "16: Necrosis irreversible",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21162317&authkey=AGrFc3oKls2vJeE"
+                },
+                {
+                    "order": 16,
+                    "title": "17: Pretensión de distorsión compleja",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21162316&authkey=ADuwutzQoHxl798"
+                },
+                {
+                    "order": 17,
+                    "title": "18: Andrógino de autosemejanza",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21162318&authkey=APnblemDYEb4isY"
+                },
+                {
+                    "order": 18,
+                    "title": "19: Apoptosis de cadena infinita",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21162320&authkey=AM23RAk0j0Tt7LU"
+                },
+                {
+                    "order": 19,
+                    "title": "20: Apoptosis de extinción del odio",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21162319&authkey=ACL8axmLHCZkLUw"
+                },
+                {
+                    "order": 20,
+                    "title": "21: Fundición de la ley de causalidad",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21162325&authkey=AGJ0dfKnTpZRCdQ"
+                },
+                {
+                    "order": 21,
+                    "title": "22: Fundición de la comprensión existencial",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21162323&authkey=ACR990kFYRydQtI"
+                },
+                {
+                    "order": 22,
+                    "title": "23β: Abre el Enlace Perdido",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21162327&authkey=AI-ZzZrP1Uoaixg"
+                },
+                {
+                    "order": 23,
+                    "title": "1: Ultima Pieza del Aniquilador: Absolute Zero",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21162353&authkey=AH6cyyTFhOCgkQM"
+                },
+                {
+                    "order": 24,
+                    "title": "2: Epigraph of the Closed Curve: Closed Epigraph",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21162352&authkey=AH2KWmNdZryub4M"
+                },
+                {
+                    "order": 25,
+                    "title": "3: Protocol of the Two-sided Gospel: X-Day Protocol",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21162355&authkey=ANosudq8sfjoiGk"
+                },
+                {
+                    "order": 26,
+                    "title": "4: Solitude of the Mournful Flow: A Stray Sheep",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21162359&authkey=ANPoT0p_MmgsYfA"
+                },
+                {
+                    "order": 27,
+                    "title": "5: Solitude of the Astigmatism: Entangled Sheep",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21162358&authkey=AIKxQJgb17aGOMs"
+                },
+                {
+                    "order": 28,
+                    "title": "6: Eclipse of Orbital Ordering: The Orbital Eclipse",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21162357&authkey=AFLBIRAoBWX66yI"
+                },
+                {
+                    "order": 29,
+                    "title": "7: Eclipse of Vibronic Transition: Vibronic Transition",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21162356&authkey=ACQ2oFpUJEBAxRc"
+                },
+                {
+                    "order": 30,
+                    "title": "8: Dual of Antinomy: Antinomic Dual",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21162360&authkey=AEQYbwktMDwzc48"
+                },
+                {
+                    "order": 31,
+                    "title": "9: Pandora of Eternal Return: Pandora''s Box",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21162361&authkey=AOHaxJ952H_iNnQ"
+                },
+                {
+                    "order": 32,
+                    "title": "9.5 (OVA): Especial San Valentin: Valentine''s of Crystal Polymorphism: Bittersweet Intermedio",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21162354&authkey=ABKKFlKHox7y17I"
+                },
+                {
+                    "order": 33,
+                    "title": "10: Pandora of Provable Existence: Forbidden Cubicle",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21162362&authkey=AAidRiI-Ffl0UH0"
+                },
+                {
+                    "order": 34,
+                    "title": "11: Pandora of Forgotten Existence: Sealed Reliquary",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21162364&authkey=ABn721kv8naU4MM"
+                },
+                {
+                    "order": 35,
+                    "title": "12: Mother Goose of Mutual Recursion: Recursive Mother Goose",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21162363&authkey=AGQGCo6SEbn1RiM"
+                },
+                {
+                    "order": 36,
+                    "title": "13: Mother Goose of Diffractive Recitativo: Diffraction Mother Goose",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21162368&authkey=AJiy1miTqeHe5UU"
+                },
+                {
+                    "order": 37,
+                    "title": "14: Recognition of the Elastic Limit: Presage or Recognize",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21162372&authkey=AHixvQDSjwOl3c4"
+                },
+                {
+                    "order": 38,
+                    "title": "15: Recognition of the Asymptotic Line: Recognize Asymptote",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21162366&authkey=AMJ30YEJ_Eqjl80"
+                },
+                {
+                    "order": 39,
+                    "title": "16: Altair of the Point at Infinity: Vega and Altair",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21162365&authkey=ADpDUP2nFioiWDM"
+                },
+                {
+                    "order": 40,
+                    "title": "17: Altair of the Hyperbolic Plane: Beltrami Pseudosphere",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21162371&authkey=AHJYKzE0IDRe0G8"
+                },
+                {
+                    "order": 41,
+                    "title": "18: Altair of Translational Symmetry: Translational Symmetry",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21162381&authkey=AIGyqGkEmtMNjlo"
+                },
+                {
+                    "order": 42,
+                    "title": "19: Altair of the Cyclic Coordinate: Time-Leap Machine",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21162369&authkey=AFMIEd8Mx0VNyM0"
+                },
+                {
+                    "order": 43,
+                    "title": "20: Rinascimento of the Unwavering Promise: Promised Rinascimento",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21162370&authkey=AP6qitEkn_9OTmk"
+                },
+                {
+                    "order": 44,
+                    "title": "21: Rinascimento of Image Formation: Return of Phoenix",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21162367&authkey=APWchP7vqia65Hc"
+                },
+                {
+                    "order": 45,
+                    "title": "22: Rinascimento of Projection: Project Amadeus",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21162380&authkey=AHeoVwvAyjT3RQ0"
+                },
+                {
+                    "order": 46,
+                    "title": "23: Arclight of the Point at Infinity: Arclight of the Sky",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21162374&authkey=ABFKrKzbqvXEI-I"
+                },
+                {
+                    "order": 47,
+                    "title": "23: Steins Gate, plano en la frontera",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21162324&authkey=AJvI1b0XcII4hNQ"
+                },
+                {
+                    "order": 48,
+                    "title": "24: Prólogo del fin y el principio",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21230655&authkey=ADIUD3Lt8c5YM04"
+                },
+                {
+                    "order": 49,
+                    "title": "OVA: Poriomanía del egoísmo",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21162326&authkey=AJXX__5KsE2crfE"
+                },
+                {
+                    "order": 50,
+                    "title": "Película: El déjà vu del área de carga negativa",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21162382&authkey=ABJ67pQXemNFFzw"
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "name": "Fate Heavens Feel",
+            "poster": "heavensfeel.jpg",
+            "quote": "People die when they are killed.",
+            "author": "Shirou Emiya",
+            "episodes": [
+                {
+                    "order": 0,
+                    "title": "Presage Flower",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21316531&authkey=AJvcRObarpRwzpo"
+                },
+                {
+                    "order": 1,
+                    "title": "Lost Butterfly",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21316532&authkey=AHYwF1A923Uj4g4"
+                },
+                {
+                    "order": 2,
+                    "title": "Spring Song",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21316533&authkey=ABs7nj-UrAi7_DY"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Fate/Stay Night",
+            "poster": "staynight.jpg",
+            "quote": "People die when they are killed.",
+            "author": "Shirou Emiya",
+            "episodes": [
+                {
+                    "order": 0,
+                    "title": "The First Day",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21316621&authkey=AKOjv-JK6T8Eb6A"
+                },
+                {
+                    "order": 1,
+                    "title": "Fateful Night",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21316610&authkey=ANmLk_8t6Uj-PwY"
+                },
+                {
+                    "order": 2,
+                    "title": "Opening",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21316602&authkey=AF7maPuOnv0N9Qo"
+                },
+                {
+                    "order": 3,
+                    "title": "The Strongest Enemy",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21316601&authkey=AE4UrfK6qeC6muc"
+                },
+                {
+                    "order": 4,
+                    "title": "Two Magi (Part 1)",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21316604&authkey=AESFlW3iQHxFLu8"
+                },
+                {
+                    "order": 5,
+                    "title": "Two Magi (Part 2)",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21316600&authkey=AFWNlAGSGFMeGfs"
+                },
+                {
+                    "order": 6,
+                    "title": "Despicable Act",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21316599&authkey=AKq09dsqKqwLfn4"
+                },
+                {
+                    "order": 7,
+                    "title": "Discordant Melody",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21316603&authkey=AM8tY27CdBmCSPE"
+                },
+                {
+                    "order": 8,
+                    "title": "Moonlit Elegance",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21316607&authkey=AHUZaIWF4Q3iMWc"
+                },
+                {
+                    "order": 9,
+                    "title": "A Peaceful Interlude",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21316619&authkey=AH1Im4wX9PVCJ7Y"
+                },
+                {
+                    "order": 10,
+                    "title": "Fresh Blood Temple (Blood Fort Andromeda)",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21316620&authkey=AGL3hNj0jeopiXA"
+                },
+                {
+                    "order": 11,
+                    "title": "Tearing The sky",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21316622&authkey=APFHs9LjJ5CcqfQ"
+                },
+                {
+                    "order": 12,
+                    "title": "Winter Castle",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21316617&authkey=AMqTdNgRf_bXl-w"
+                },
+                {
+                    "order": 13,
+                    "title": "End of The Ideal",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21316616&authkey=APVaKV7Zjniz4w0"
+                },
+                {
+                    "order": 14,
+                    "title": "The Twelve Trials",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21316615&authkey=AHMTO56WMetqgV4"
+                },
+                {
+                    "order": 15,
+                    "title": "The Sword of Promised Victory",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21316611&authkey=AJiTIlGSWVA6qv0"
+                },
+                {
+                    "order": 16,
+                    "title": "Branded As A Witch",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21316618&authkey=AJlWQajSzxjFbfA"
+                },
+                {
+                    "order": 17,
+                    "title": "Decisive Battle",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21316612&authkey=ADz-WcDa515lW8k"
+                },
+                {
+                    "order": 18,
+                    "title": "The Golden King",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21316613&authkey=AP02FT1xyjz_b2Y"
+                },
+                {
+                    "order": 19,
+                    "title": "Distant Trace of a Dream",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21316614&authkey=ANOK1oGcLqpAPgc"
+                },
+                {
+                    "order": 20,
+                    "title": "The Star of Creation That Divided Heaven and Earth",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21316609&authkey=AMGetG25N3WtkFs"
+                },
+                {
+                    "order": 21,
+                    "title": "At The End of Wishes",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21316606&authkey=ACDtO9ksQ-L5wuU"
+                },
+                {
+                    "order": 22,
+                    "title": "Holy Grail",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21316605&authkey=AKOn9KEbDsZSP3s"
+                },
+                {
+                    "order": 23,
+                    "title": "All Too Distant Utopia",
+                    "url": "https://onedrive.live.com/download?cid=A03A8966D3E08B51&resid=a03a8966d3e08b51%21316608&authkey=AKHkLIBbhyPLqUY"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "Fate/Zero",
+            "poster": "fatezero.jpg",
+            "quote": "Pending-Quote",
+            "author": "Kiritsugu Emiya",
+            "episodes": [
+                {
+                    "order": 0,
+                    "title": "1 Invocación de los Espíritus Heróicos",
+                    "url": "https://onedrive.live.com/download?resid=A03A8966D3E08B51%21222691\u0026authkey=!AMSyZYGFxu5vXkU"
+                },
+                {
+                    "order": 1,
+                    "title": "2 Entrada Falsa",
+                    "url": "https://onedrive.live.com/download?resid=A03A8966D3E08B51%21222690\u0026authkey=!AD41uJLt4RpcKtI"
+                },
+                {
+                    "order": 2,
+                    "title": "3 Tierra de Árboles de Invierno",
+                    "url": "https://onedrive.live.com/download?resid=A03A8966D3E08B51%21222686\u0026authkey=!ACHMs9AuOKagJM8"
+                },
+                {
+                    "order": 3,
+                    "title": "4 Hoja de la Lanza Demoníaca",
+                    "url": "https://onedrive.live.com/download?resid=A03A8966D3E08B51%21222689\u0026authkey=!ANVGVlMPmt0w3WE"
+                },
+                {
+                    "order": 4,
+                    "title": "5 Aullido de una Bestia Loca",
+                    "url": "https://onedrive.live.com/download?resid=A03A8966D3E08B51%21222688\u0026authkey=!AKoOw6g3ymGwXAQ"
+                },
+                {
+                    "order": 5,
+                    "title": "6 Noche de Estrategamas",
+                    "url": "https://onedrive.live.com/download?resid=A03A8966D3E08B51%21222685\u0026authkey=!AOAXG6h2BxM5Pkc"
+                },
+                {
+                    "order": 6,
+                    "title": "7 Bosque de Demonios",
+                    "url": "https://onedrive.live.com/download?resid=A03A8966D3E08B51%21222683\u0026authkey=!ALZHnEAAszceKew"
+                },
+                {
+                    "order": 7,
+                    "title": "8 Mago Asesino",
+                    "url": "https://onedrive.live.com/download?resid=A03A8966D3E08B51%21222680\u0026authkey=!AEVFgIiRriC5CTY"
+                },
+                {
+                    "order": 8,
+                    "title": "9 Señor y Vasallo",
+                    "url": "https://onedrive.live.com/download?resid=A03A8966D3E08B51%21222679\u0026authkey=!AON3ChzIeve1uWM"
+                },
+                {
+                    "order": 9,
+                    "title": "10 La Aventura de Rin",
+                    "url": "https://onedrive.live.com/download?resid=A03A8966D3E08B51%21222678\u0026authkey=!AGZrVouKwt7DJ3U"
+                },
+                {
+                    "order": 10,
+                    "title": "11 Diálogo del Grial",
+                    "url": "https://onedrive.live.com/download?resid=A03A8966D3E08B51%21222681\u0026authkey=!AJ3jOUprTxXmCMY"
+                },
+                {
+                    "order": 11,
+                    "title": "12 La Invitación del Grial",
+                    "url": "https://onedrive.live.com/download?resid=A03A8966D3E08B51%21222684\u0026authkey=!AK9KfjOKmovu6Vs"
+                },
+                {
+                    "order": 12,
+                    "title": "13 El Banquete Prohibido",
+                    "url": "https://onedrive.live.com/download?resid=A03A8966D3E08B51%21222687\u0026authkey=!AMLJ1fuAttKODdI"
+                },
+                {
+                    "order": 13,
+                    "title": "14 La Batalla del Río Mion",
+                    "url": "https://onedrive.live.com/download?resid=A03A8966D3E08B51%21222682\u0026authkey=!AHi-POvnossJG-c"
+                },
+                {
+                    "order": 14,
+                    "title": "15 Brillo Dorado",
+                    "url": "https://onedrive.live.com/download?resid=A03A8966D3E08B51%21222675\u0026authkey=!APDSya3EkEmundM"
+                },
+                {
+                    "order": 15,
+                    "title": "16 Términos de Honor",
+                    "url": "https://onedrive.live.com/download?resid=A03A8966D3E08B51%21222677\u0026authkey=!AJIr0GCj27DLt5Y"
+                },
+                {
+                    "order": 16,
+                    "title": "17 El Octavo Contrato",
+                    "url": "https://onedrive.live.com/download?resid=A03A8966D3E08B51%21222676\u0026authkey=!AFUiR-bfWT2Z9Vw"
+                },
+                {
+                    "order": 17,
+                    "title": "18 Recuerdos Distantes",
+                    "url": "https://onedrive.live.com/download?resid=A03A8966D3E08B51%21222671\u0026authkey=!AMuVk2wTDNIvnxo"
+                },
+                {
+                    "order": 18,
+                    "title": "19 Donde se Halla la Justicia",
+                    "url": "https://onedrive.live.com/download?resid=A03A8966D3E08B51%21222668\u0026authkey=!APIbHFKxjBmYG3A"
+                },
+                {
+                    "order": 19,
+                    "title": "20 El Regreso del Asesino",
+                    "url": "https://onedrive.live.com/download?resid=A03A8966D3E08B51%21222669\u0026authkey=!AKouZyA82PUOQzI"
+                },
+                {
+                    "order": 20,
+                    "title": "21 Caballaero en Dos Ruedas",
+                    "url": "https://onedrive.live.com/download?resid=A03A8966D3E08B51%21222670\u0026authkey=!ADeDPJ8Xr23LdXM"
+                },
+                {
+                    "order": 21,
+                    "title": "22 La Maldad de Todo el Mundo",
+                    "url": "https://onedrive.live.com/download?resid=A03A8966D3E08B51%21222673\u0026authkey=!ALR1GO8gyIeM-6I"
+                },
+                {
+                    "order": 22,
+                    "title": "23 El Mar en el Fin del Mundo",
+                    "url": "https://onedrive.live.com/download?resid=A03A8966D3E08B51%21222674\u0026authkey=!AFXq75G3hwIOwjo"
+                },
+                {
+                    "order": 23,
+                    "title": "24 El Último Command Spell",
+                    "url": "https://onedrive.live.com/download?resid=A03A8966D3E08B51%21222672\u0026authkey=!AKG3uV_bzk5MsVE"
+                },
+                {
+                    "order": 24,
+                    "title": "25 Fate Zero",
+                    "url": "https://onedrive.live.com/download?resid=A03A8966D3E08B51%21222667\u0026authkey=!AJ2OjkSa2N7SdjA"
+                }
+            ]
+        }
+    ]
+}

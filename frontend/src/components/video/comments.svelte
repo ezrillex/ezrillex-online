@@ -77,7 +77,7 @@
     {#await fetchData()}
         <p>Loading comments....</p>
     {:then data}
-        <div class="card mt-3">
+        <div class="card mt-3 mb-3">
             <div class="card-header">Comentarios:</div>
             <ul class="list-group list-group-flush">
                 {#if comments.length == 0}
