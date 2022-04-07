@@ -33,6 +33,9 @@
                 <NavItem  > 
                     <NavLink  on:click={toggle} href="#/">Inicio</NavLink>
                 </NavItem>
+                <NavItem>
+                    <NavLink on:click={toggle} href="#/blog">Blog</NavLink>
+                </NavItem>
                 <NavItem >
                     <NavLink  on:click={toggle} href="#/series">Series</NavLink>
                 </NavItem>

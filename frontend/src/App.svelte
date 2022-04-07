@@ -7,12 +7,18 @@
 	import Series from "./pages/Series.svelte";
 	import Serie from "./pages/Serie.svelte";
 	import Player from "./components/video/Player.svelte";
+	import blog from "./pages/blog.svelte"
+	import post from "./components/blog/post.svelte"
 
 	import Navbar from "./components/layout/navbar.svelte";
 	import Footer from "./components/layout/footer.svelte";
 
 	const routes = {
 		"/": Home,
+
+		"/blog": blog,
+
+		"/blog/:id": post,
 
 		"/series": Series,
 

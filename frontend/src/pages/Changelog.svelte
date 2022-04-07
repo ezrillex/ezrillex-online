@@ -10,9 +10,15 @@
             <li>Thinking about doing something with socket.io</li>
         </ul>
 
-        <h4>[Unreleased] v0.5.7</h4>
+        <h4>[Unreleased] v0.5.8</h4>
         <ul>
             <li>Showcase projects.</li>
+        </ul>
+
+        <h4>v0.5.7</h4>
+        <ul>
+            <li>Added a blog.</li>
+            <li>Setup wordpress to use as a headless CMS for the blog.</li>
         </ul>
 
         <h4>v0.5.6</h4>
