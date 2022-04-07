@@ -19,7 +19,10 @@ jobs:
         server-dir: /
         local-dir: ./frontend/public/
         exclude: |
-        **/wordpress/**
+          **/.git*
+          **/.git*/**
+          **/node_modules/**
+          **/wordpress/**
     - name: 📂 Sync backend files
       uses: SamKirkland/FTP-Deploy-Action@4.3.0
       with:
