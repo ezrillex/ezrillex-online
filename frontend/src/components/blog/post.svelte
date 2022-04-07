@@ -21,7 +21,7 @@
                 <h1>Loading...</h1>
             {:then post}
                 <h1>{post.title.rendered}</h1>
-
+                <h6 >{new Date(post.date).toLocaleString()}</h6>
                 {@html post.content.rendered}
             {/await}
         </div>

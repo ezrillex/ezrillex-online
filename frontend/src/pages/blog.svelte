@@ -1,5 +1,6 @@
 <script>
     import { fade } from "svelte/transition";
+import Post from "../components/blog/post.svelte";
     const fetchPosts = async () => {
         const response = await fetch(
             "https://abarca.dev/wordpress/wp-json/wp/v2/posts"
@@ -18,8 +19,9 @@
             {:then data}
                 {#each data as post}
                     <a class="link-dark" href="#/blog/{post.id}">
-                        <h1>{post.title.rendered}</h1>
+                        <h1  >{post.title.rendered}</h1>
                     </a>
+                    <h6 >{new Date(post.date).toLocaleString()}</h6>
                     {@html post.excerpt.rendered}
                 {/each}
             {/await}
