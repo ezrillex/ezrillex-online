@@ -28,4 +28,6 @@
 
         <a class="link-dark" href="#/blog">Go back to posts.</a>
     </div>
+    <br>
 </main>
+

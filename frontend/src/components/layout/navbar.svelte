@@ -31,7 +31,7 @@
         <Collapse {isOpen} navbar expand="md" on:update={handleUpdate}>
             <Nav navbar>
                 <NavItem  > 
-                    <NavLink  on:click={toggle} href="#/">Inicio</NavLink>
+                    <NavLink  on:click={toggle} href="#/">Home</NavLink>
                 </NavItem>
                 <NavItem>
                     <NavLink on:click={toggle} href="#/blog">Blog</NavLink>

@@ -24,9 +24,7 @@ import Comments from "./comments.svelte";
         {#if !$dataStore.encrypted}
             <br />
 
-            <div class="jumbotron">
-                <h1 class="text-center">{$dataStore.series[params.id].name}</h1>
-            </div>
+            <h1 class="text-center">{$dataStore.series[params.id].name}</h1>
 
             {#key $dataStore.series[params.id].episodes[params.order].url}
                 <VideoPlayer
@@ -44,20 +42,20 @@ import Comments from "./comments.svelte";
                     <a
                         href="#/series/{params.id}/{params.order - 1}"
                         type="button"
-                        class="btn btn-dark bg-black m-2">Anterior</a
+                        class="btn btn-dark bg-black m-2">Previous</a
                     >
                 {/if}
                 <div class="">
                     <a
                         class="btn btn-outline-dark "
-                        href="#/series/{params.id}/">Regresar a Lista</a
+                        href="#/series/{params.id}/">Go back to list</a
                     >
                 </div>
                 {#if parseInt(params.order) + 1 < $dataStore.series[params.id].episodes.length}
                     <a
                         href="#/series/{params.id}/{parseInt(params.order) + 1}"
                         type="button"
-                        class="btn btn-dark bg-black m-2">Siguiente</a
+                        class="btn btn-dark bg-black m-2">Next</a
                     >
                 {/if}
             </div>

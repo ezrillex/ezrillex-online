@@ -29,7 +29,7 @@
                     </svg>
                 {/if}
             </div>
-            <a href="#/series/{params.id}/{episode.order}">Ver Episodio</a>
+            <a href="#/series/{params.id}/{episode.order}">Watch Episode</a>
         </div>
     </div>
 </main>

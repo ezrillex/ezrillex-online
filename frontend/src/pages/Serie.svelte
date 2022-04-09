@@ -23,7 +23,7 @@
                     </div>
                     <br>
                     <div class="d-flex justify-content-center">
-                        <Button href="#/series/" color="dark">Volver a Series</Button>
+                        <Button href="#/series/" color="dark">Go back to Series</Button>
                     </div>
                 </div>
                 <div class="col-sm-8">

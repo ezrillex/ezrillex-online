@@ -1,5 +1,4 @@
 <script>
-    import { component_subscribe, text } from "svelte/internal";
 
     export let params;
 
@@ -66,7 +65,7 @@
                 <button
                     on:click={postComment}
                     type="button"
-                    class="btn btn-dark align-self-end">Publicar</button
+                    class="btn btn-dark align-self-end">Post</button
                 >
             </div>
             <textarea class="form-control" bind:value={commentText} rows="1" />
@@ -78,7 +77,7 @@
         <p>Loading comments....</p>
     {:then data}
         <div class="card mt-3 mb-3">
-            <div class="card-header">Comentarios:</div>
+            <div class="card-header">Comments:</div>
             <ul class="list-group list-group-flush">
                 {#if comments.length == 0}
                     <li class="list-group-item">No hay comentarios.</li>
