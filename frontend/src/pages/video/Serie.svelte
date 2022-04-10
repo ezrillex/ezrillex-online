@@ -1,13 +1,13 @@
 <script>
-    import Episode from "../components/Episode.svelte";
-    import AskDecrypt from "../components/encryption/AskDecrypt.svelte";
-    import dataStore from "../stores/dataStore";
-    import {Button} from 'sveltestrap'
-    import {fade} from 'svelte/transition'
+    import Episode from "../video/Episode.svelte";
+    import AskDecrypt from "../../components/encryption/AskDecrypt.svelte";
+    import dataStore from "../../stores/dataStore";
+    import { Button } from "sveltestrap";
+    import { fade } from "svelte/transition";
     export let params;
 </script>
 
-<main in:fade="{{duration: 500}}">
+<main in:fade={{ duration: 500 }}>
     <div class="container">
         {#if !$dataStore.encrypted}
             <br />
@@ -21,9 +21,11 @@
                             alt="Poster de {$dataStore.series[params.id].name}"
                         />
                     </div>
-                    <br>
+                    <br />
                     <div class="d-flex justify-content-center">
-                        <Button href="#/series/" color="dark">Go back to Series</Button>
+                        <Button href="#/series/" color="dark"
+                            >Go back to Series</Button
+                        >
                     </div>
                 </div>
                 <div class="col-sm-8">

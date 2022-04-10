@@ -9,7 +9,7 @@
     };
 
     async function AttemptDecrypt() {
-        // save submitted password as key, clear password field
+        // save submitted password as key, clean password field
         $dataStore.mykey = password;
 
         const data = await fetchData();
@@ -20,9 +20,9 @@
                 CryptoJS.enc.Utf8
             );
         } catch (error) {
-            // error means key is wrong, so lets clear it on backend as well
+            // error means key is wrong, so lets clear it on local storage as well
             password = "";
-            $dataStore.mykey = ""; 
+            $dataStore.mykey = "";
             return;
         }
 
@@ -31,13 +31,40 @@
     }
 
     if ($dataStore.mykey != "") AttemptDecrypt();
+
+    function enterKeyPressed(event) {
+      if (event.keyCode == 13) {
+         AttemptDecrypt();
+      }
+   }
 </script>
 
-<div>
-    {#if $dataStore.mykey == ""}
-        <p>Data is encrypted!</p>
-        <p>Input the password to continue:</p>
-        <input bind:value={password} type="text" />
-        <Button on:click={AttemptDecrypt}>Decrypt</Button>
-    {/if}
+<div class="text-center">
+    <div class="d-inline-flex justify-content-center ">
+        {#if $dataStore.mykey == ""}
+            <div class="col">
+                <div class="row">
+                    <p>This page is private.</p>
+                </div>
+                <div class="row">
+                    <p>Input the password to continue:</p>
+                </div>
+                <div class="flex-row">
+                    <div class="input-group">
+                        <input
+                            class="me-2 form-control d-inline"
+                            placeholder="password"
+                            bind:value={password}
+                            type="text"
+                            on:keyup={enterKeyPressed}
+                        />
+                        <Button
+                            class="d-inline btn btn-dark align-self-end"
+                            on:click={AttemptDecrypt}>Decrypt</Button
+                        >
+                    </div>
+                </div>
+            </div>
+        {/if}
+    </div>
 </div>

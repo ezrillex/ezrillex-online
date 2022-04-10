@@ -1,10 +1,10 @@
 <script>
     import { fade } from "svelte/transition";
     import VideoPlayer from "./VideoPlayer.svelte";
-    import AskDecrypt from "../encryption/AskDecrypt.svelte";
+    import AskDecrypt from "../../components/encryption/AskDecrypt.svelte";
     import dataStore from "../../stores/dataStore";
     import { push } from "svelte-spa-router";
-import Comments from "./comments.svelte";
+    import Comments from "./comments.svelte";
 
     export let params;
 

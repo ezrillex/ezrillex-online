@@ -1,5 +1,4 @@
 <script>
-
     export let params;
 
     let commentText;
@@ -37,14 +36,15 @@
                 Accept: "application/json, text/plain, */*",
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify( the_comment)
+            body: JSON.stringify(the_comment),
         }).then((res) => {
-            if( res.status == 403 ){ return;}
-        })
-        
-        comments= [the_comment, ...comments]
+            if (res.status == 403) {
+                return;
+            }
+        });
+
+        comments = [the_comment, ...comments];
         commentText = "";
-        // commentUser = "";
     };
 </script>
 
@@ -82,7 +82,7 @@
                 {#if comments.length == 0}
                     <li class="list-group-item">No hay comentarios.</li>
                 {/if}
-                {#each comments as {user, comment}}
+                {#each comments as { user, comment }}
                     <li class="list-group-item">
                         <span class="fw-bold">{user}: </span>{comment}
                     </li>

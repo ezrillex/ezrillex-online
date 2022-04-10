@@ -5,20 +5,24 @@
 <main in:fade={{ duration: 500 }}>
     <div class="container">
         <br />
-        <h4>[Future]</h4>
+        <h4>[Unreleased] v0.6.0</h4>
         <ul>
-            <li>Thinking about doing something with socket.io</li>
+            <li>Working on some ideas about Unity WebGL + Socket.io.</li>
         </ul>
 
-        <h4>[Unreleased] v0.5.9</h4>
+        <h4>v0.5.9</h4>
         <ul>
-            <li>Showcase projects.</li>
+            <li>Showcase projects on homepage.</li>
+            <li>Cleaned/organized frontend codebase.</li>
+            <li>Add this site frontend as showcase.</li>
         </ul>
 
         <h4>v0.5.8</h4>
         <ul>
             <li>Localized site to english.</li>
-            <li>Removed the GPA breakdown, making space for project showcase.</li>
+            <li>
+                Removed the GPA breakdown, making space for project showcase.
+            </li>
         </ul>
 
         <h4>v0.5.7</h4>

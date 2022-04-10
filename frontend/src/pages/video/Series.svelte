@@ -1,15 +1,15 @@
 <script>
     import { fade } from "svelte/transition";
-    import AskDecrypt from "../components/encryption/AskDecrypt.svelte";
+    import AskDecrypt from "../../components/encryption/AskDecrypt.svelte";
 
-    import dataStore from "../stores/dataStore";
+    import dataStore from "../../stores/dataStore";
 </script>
 
 <main in:fade={{ duration: 500 }}>
     <div class="container mt-4">
         {#if !$dataStore.encrypted}
             <div class="row row-cols-1 row-cols-md-3 g-4">
-                {#each $dataStore.series as { id, poster, name }}
+                {#each $dataStore.series as { id, poster }}
                     <div class="col">
                         <a class="card d-inline-block m-3" href="#/series/{id}">
                             <div class="card">
