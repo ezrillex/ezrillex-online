@@ -5,9 +5,18 @@
 <main in:fade={{ duration: 500 }}>
     <div class="container">
         <br />
-        <h4>[Unreleased] v0.6.0</h4>
+        <h4>[Future]</h4>
         <ul>
             <li>Working on some ideas about Unity WebGL + Socket.io.</li>
+            <li>Migrate to SvelteKit to harness the power of Server-Side Rendering.</li>
+        </ul>
+
+        <h4>[Unreleased] v0.6.0</h4>
+        <ul>
+            <li>Remove Sveltestrap dependency, it added 64k to the bundle size.</li>
+            <li>Migrated to tailwind css.</li>
+            <li>Fetch changelog, this page increased bundle size by 5k, which is the same as the entire blog code and it will only keep growing.</li>
+            <li>Remove svelte-progressbar dependency. It added 34k to the bundle size.</li>
         </ul>
 
         <h4>v0.5.9</h4>
@@ -15,6 +24,7 @@
             <li>Showcase projects on homepage.</li>
             <li>Cleaned/organized frontend codebase.</li>
             <li>Add this site frontend as showcase.</li>
+            <li>Added lazy loading to images. (except blog ones)</li>
         </ul>
 
         <h4>v0.5.8</h4>
