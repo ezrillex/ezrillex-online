@@ -1,6 +1,7 @@
 <script>
     import { fade } from "svelte/transition";
     import ProgressBar from "@okrad/svelte-progressbar";
+    import { useLazyImage as lazyImage } from 'svelte-lazy-image';
 
     export let series = [
         {
@@ -17,7 +18,7 @@
         >
             <div class="col col-md-auto ps-0 pe-0">
                 <div class="d-flex justify-content-center">
-                    <img src="./images/PFP.jpeg" alt="Developer" />
+                    <img src="./images/PFP.jpeg" alt="Developer" use:lazyImage />
                 </div>
             </div>
 
@@ -83,6 +84,7 @@
                     src="/images/tech-stack-abarca-dev.png"
                     class="img-fluid"
                     alt="..."
+                    use:lazyImage
                 />
                 <div class="col">
                     <div class="card-body">

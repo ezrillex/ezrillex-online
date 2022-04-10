@@ -1,6 +1,7 @@
 <script>
     import { fade } from "svelte/transition";
     import AskDecrypt from "../../components/encryption/AskDecrypt.svelte";
+    import { LazyImage } from 'svelte-lazy-image';
 
     import dataStore from "../../stores/dataStore";
 </script>
@@ -13,7 +14,7 @@
                     <div class="col">
                         <a class="card d-inline-block m-3" href="#/series/{id}">
                             <div class="card">
-                                <img
+                                <LazyImage
                                     src="images/posters/{poster}"
                                     class="card-img-top"
                                     alt="..."
