@@ -1,14 +1,9 @@
 <script>
     import { fade } from "svelte/transition";
-    import ProgressBar from "@okrad/svelte-progressbar";
     import { useLazyImage as lazyImage } from 'svelte-lazy-image';
 
-    export let series = [
-        {
-            perc: ((21 / 45) * 100).toFixed(1),
-            color: "#3CB043",
-        },
-    ];
+    const percentage = ((21 / 45) * 100).toFixed(1);
+   
 </script>
 
 <main in:fade={{ duration: 500 }}>
@@ -23,20 +18,22 @@
             </div>
 
             <div class="col align-self-center">
-                <div class="row ">
+                <div class="row mt-3">
                     <div
                         class="d-flex justify-content-center align-items-center"
                     >
                         <h1 class="me-2">Systems Engineer</h1>
-                        <ProgressBar
-                            thickness="10"
-                            textSize="150"
-                            style="radial"
-                            {series}
-                        />
+                        <div class="wheel">
+                            <p class="text-middle text-center">{percentage}%</p>
+
+                            <div class="the-wheel" >
+
+                            </div>
+                        </div>
+                        
                     </div>
                 </div>
-                <div class="row">
+                <div class="row mt-3">
                     <div class="d-flex flex-row justify-content-evenly">
                         <a
                             href="https://www.linkedin.com/in/ezra-alejandro-abarca-cordova-sv"
@@ -79,13 +76,16 @@
             <h1>~My Projects~</h1>
         </div>
         <div class="card mt-3">
-            <div class="row g-0">
-                <img
+            <div class="row g-0 justify-content-center">
+                <div class="col col-auto ">
+                    <img
                     src="/images/tech-stack-abarca-dev.png"
                     class="img-fluid"
                     alt="..."
                     use:lazyImage
-                />
+                    />
+                </div>
+                
                 <div class="col">
                     <div class="card-body">
                         <h5 class="card-title">ezra.abarca.dev</h5>
@@ -149,4 +149,35 @@
             max-width: 100%;
         }
     }
+ 
+   
+
+    .the-wheel {
+        background-color: transparent;
+        width: 100px;
+        height: 100px;
+        border-radius: 100%;
+        top: 0px;
+        position: absolute;
+        border-style: solid;
+        border-color: green;
+        border-width: 12px;
+        /*clip-path: polygon(50% 0, 100% 0, 100% 100%, 0 100%, 0 50%, 50% 50%);
+        https://bennettfeely.com/clippy/ */
+        clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+    }
+
+   
+    .wheel { 
+        width:100px;
+        height: 100px;
+        position: relative;
+    }
+
+    .text-middle {
+        position:relative;
+        top: 37%;
+        
+    }
+   
 </style>
