@@ -7,9 +7,10 @@
         <br />
         <h1>Changelog</h1>
         <br />
-        <h4>[Future]</h4>
+
+        <h4>v0.6.2</h4>
         <ul>
-            <li>Migrate to SvelteKit to harness the power of Server-Side Rendering.</li>
+            <li>Changed style of navbar and footer, to reduce how similarly it looked to Github.</li>
         </ul>
 
         <h4>v0.6.1</h4>

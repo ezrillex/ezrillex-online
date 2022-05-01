@@ -19,10 +19,10 @@
 </script>
 
 <main>
-    <Navbar
-        color="dark"
-        dark
-        class="bg-black d-flex justify-content-start align-items-center"
+    <div class="d-md-flex justify-content-center align-items-center">
+        <Navbar
+        light
+        class="justify-content-start align-items-center"
         expand="md"
     >
         <img src="/favicon.png" width="25rem" height="auto" alt="" />
@@ -44,4 +44,6 @@
             </Nav>
         </Collapse>
     </Navbar>
+    </div>
+   
 </main>
