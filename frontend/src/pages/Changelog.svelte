@@ -9,9 +9,12 @@
         <br />
         <h4>[Future]</h4>
         <ul>
-            <li>Blogpost pagination.</li>
-            <li>Working on some ideas about Unity WebGL + Socket.io.</li>
             <li>Migrate to SvelteKit to harness the power of Server-Side Rendering.</li>
+        </ul>
+
+        <h4>v0.6.1</h4>
+        <ul>
+            <li>Remove blog, I don't have time to be posting stuff.</li>
         </ul>
 
         <h4>v0.6.0</h4>

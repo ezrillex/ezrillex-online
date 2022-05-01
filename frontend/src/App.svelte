@@ -7,24 +7,16 @@
 	import Series from "./pages/video/Series.svelte";
 	import Serie from "./pages/video/Serie.svelte";
 	import Player from "./pages/video/Player.svelte";
-	import blog from "./pages/blog.svelte"
 
 	import Navbar from "./components/layout/navbar.svelte";
 	import Footer from "./components/layout/footer.svelte";
 
 	const routes = {
 		"/": Home,
-
-		"/blog": blog,
-
 		"/series": Series,
-
 		"/series/:id": Serie,
-
 		"/series/:id/:order": Player,
-
 		"/changelog": Changelog,
-
 		"/404": NotFoundPage,
 		"*": NotFoundPage,
 	};
