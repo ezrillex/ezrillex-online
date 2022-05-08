@@ -4,13 +4,12 @@ const express = require('express');
 const cron = require('node-cron');
 const cors = require('cors')
 const app = express();
-const prism = require('@prisma/client')
-const { PrismaClient } = prism;
-const prisma = new PrismaClient();
 
 const PORT = process.env.PORT || 8000;
 
 var comments = {}
+
+var shortened_links = {}
 
 try {
     comments = JSON.parse(fs.readFileSync('comments.txt', 'utf8'))
@@ -19,9 +18,17 @@ try {
     console.error(err)
 }
 
+try {
+    shortened_links = JSON.parse(fs.readFileSync('shortened_links.txt', 'utf8'))
+} catch (err) {
+    console.log("Error when loading shortened links from text:")
+    console.error(err)
+}
+
 cron.schedule('*/5 * * * *', (date) => {
-    console.log("Backing up comments - " + date)
+    console.log("Backing up data - " + date)
     fs.writeFileSync('comments.txt', JSON.stringify(comments))
+    fs.writeFileSync('shortened_links.txt', JSON.stringify(shortened_links))
 });
 
 
@@ -51,6 +58,8 @@ app.post(
         if (comments[key] === undefined) comments[key] = [];
 
         comments[key].unshift({ "user": req.body.user, "comment": req.body.comment })
+
+
         res.sendStatus(200)
     });
 
@@ -66,7 +75,7 @@ app.get(prefix + '/comments/:serie/:episode', (req, res) => {
     }
     const key = serie + "." + episode
 
-
+    // why am I sending ok when it's not ok!!!!
     res.status = 200;
     res.send(comments[key] || []);
 });
@@ -76,17 +85,20 @@ app.get(prefix + '/link/:sauce', async (req, res) => {
     try {
         sauce = req.params.sauce;
 
-        const result = await prisma.shortenedLink.findUnique({
-            where: { sauce: sauce }
-        })
+        let result = shortened_links[sauce];
 
-        res.status = 200;
-        res.send({
-            url: result.url
-        })
+        if (result === undefined) {
+            res.sendStatus(404);
+        }
+        else{
+            res.status = 200;
+            res.send({
+                url: result
+            })
+        }
     }
     catch (error) {
-        res.sendStatus(404);
+        res.sendStatus(500);
     }
 
 });
@@ -94,30 +106,18 @@ app.get(prefix + '/link/:sauce', async (req, res) => {
 app.post(prefix + '/create_short_url/', async (req, res) => {
     try {
 
-        if(!isValidHttpUrl(req.body.url)){
+        if (!isValidHttpUrl(req.body.url)) {
             throw 'Invalid URL'
         }
 
         let sauce = ""
-        // check if url already has been shortened
-        const dupe = await prisma.shortenedLink.findUnique({
-            where: {
-                url: req.body.url
-            }
-        })
-        if (dupe != null) {
-            sauce = dupe.sauce;
-        }
-        else {
-            // create if not
-            sauce = await makesauce()
-            const result = await prisma.shortenedLink.create({
-                data: {
-                    sauce: sauce,
-                    url: req.body.url
-                }
-            })
-        }
+        // check if url already has been shortened ERROR Prisma not supported on hosting, lacks dependency.
+        // compromise: instead of iterating through the entire list I have to go for duplicates unfortunately.
+
+        sauce = await makesauce()
+
+        shortened_links[sauce] = req.body.url
+        
         res.status = 200;
         res.send({ sauce: sauce });
     }
@@ -130,6 +130,7 @@ app.post(prefix + '/create_short_url/', async (req, res) => {
 //#endregion
 
 async function makesauce() {
+    // stackoverflow.com/questions/1349404/generate-random-string-characters-in-javascript
     let length = 5;
     var result = '';
     var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -140,21 +141,17 @@ async function makesauce() {
     }
 
     // check if unique
-    const existing = await prisma.ShortenedLink.findUnique({
-        where: {
-            sauce: result
-        }
-    })
-
-    // re try until you get a valid id
-    if (existing != null) {
+    if (shortened_links[result] === undefined) {
+        return result;
+    } else {
+        // re try until you get a non duplicated sauce
         result = await makesauce()
+        return result
     }
-
-    return result;
 }
 
 function isValidHttpUrl(string) {
+    // stackoverflow.com/questions/5717093/check-if-a-javascript-string-is-a-url
     let url;
 
     try {

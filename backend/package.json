@@ -5,20 +5,11 @@
   "main": "server.js",
   "author": "ezrillex",
   "license": "No license",
- 
-  "scripts": {
-    "postinstall": "prisma generate"
-  },
-
   "dependencies": {
-    "@prisma/client": "^3.13.0",
     "body-parser": "^1.19.2",
     "cors": "^2.8.5",
     "express": "^4.17.3",
     "express-validator": "^6.14.0",
     "node-cron": "^3.0.0"
-  },
-  "devDependencies": {
-    "prisma": "^3.13.0"
   }
 }
