@@ -37,6 +37,9 @@
                     <NavLink on:click={toggle} href="#/series">Series</NavLink>
                 </NavItem>
                 <NavItem>
+                    <NavLink on:click={toggle} href="#/shortener">Shortener</NavLink>
+                </NavItem>
+                <NavItem>
                     <NavLink on:click={toggle} href="#/changelog"
                         >Changelog</NavLink
                     >

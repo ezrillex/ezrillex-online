@@ -8,6 +8,11 @@
         <h1>Changelog</h1>
         <br />
 
+        <h4>v0.6.3</h4>
+        <ul>
+            <li>Add Url shortening service.</li>
+        </ul>
+
         <h4>v0.6.2</h4>
         <ul>
             <li>Changed style of navbar and footer, to reduce how similarly it looked to Github.</li>

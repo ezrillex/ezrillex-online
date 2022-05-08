@@ -10,6 +10,8 @@
 
 	import Navbar from "./components/layout/navbar.svelte";
 	import Footer from "./components/layout/footer.svelte";
+	import Shortener from "./pages/url_shortener/shortener.svelte";
+	import Redirect from "./pages/url_shortener/redirect.svelte";
 
 	const routes = {
 		"/": Home,
@@ -17,6 +19,8 @@
 		"/series/:id": Serie,
 		"/series/:id/:order": Player,
 		"/changelog": Changelog,
+		"/shortener": Shortener,
+		"/link/:sauce": Redirect,
 		"/404": NotFoundPage,
 		"*": NotFoundPage,
 	};
@@ -28,7 +32,6 @@
 	<div style="flex-grow: 1;" />
 	<Footer />
 </main>
-
 
 <style>
 	/* levelup.gitconnected.com/how-to-keep-your-footer-at-the-bottom-of-the-page-the-easy-way-20aa3bcd621f */
