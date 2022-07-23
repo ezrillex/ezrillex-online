@@ -2,7 +2,7 @@
     import { fade } from "svelte/transition";
     import { useLazyImage as lazyImage } from 'svelte-lazy-image';
 
-    const percentage = ((21 / 45) * 100).toFixed(1);
+    const percentage = ((26 / 45) * 100).toFixed(1);
    
 </script>
 
