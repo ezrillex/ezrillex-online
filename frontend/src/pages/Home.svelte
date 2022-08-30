@@ -34,7 +34,10 @@
                     </div>
                 </div>
                 <div class="row mt-3">
-                    <div class="d-flex flex-row justify-content-evenly">
+                    <div class="d-flex flex-row justify-content-evenly align-items-center">
+                        <a href="https://academy.pega.com/verify-certification?fname=Ezra&lname=Abarca" target="_blank">
+                            <img src="/images/pega.png" class="pega" alt="PEGA 8.5 CSA Certification">
+                        </a>
                         <a
                             href="https://www.linkedin.com/in/ezra-alejandro-abarca-cordova-sv"
                             target="_blank"
@@ -42,7 +45,7 @@
                         >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
-                                width="3rem"
+                                width="5rem"
                                 height="auto"
                                 viewBox="0 0 24 24"
                                 ><path
@@ -57,7 +60,7 @@
                         >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
-                                width="3rem"
+                                width="5rem"
                                 height="auto"
                                 fill="currentColor"
                                 class="bi bi-github fa-lg"
@@ -72,6 +75,7 @@
                 </div>
             </div>
         </div>
+       
         <div class="text-center">
             <h1>~My Projects~</h1>
         </div>
@@ -142,6 +146,10 @@
         border-radius: 10%;
         max-width: 15rem;
         height: auto;
+    }
+
+    .pega {
+        width: 10rem; height: auto; margin: -0.5rem;
     }
 
     @include media-breakpoint-down(md) {
