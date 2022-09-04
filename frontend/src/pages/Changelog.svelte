@@ -10,6 +10,7 @@
 
         <h4>v0.6.4</h4>
         <ul>
+            <li>Migrate from rollup to vite.</li>
             <li>Add visitor count on homepage.</li>
             <li>Fix minor styling warnings.</li>
         </ul>

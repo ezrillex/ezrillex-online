@@ -1,9 +1,8 @@
 <script>
     import { fade } from "svelte/transition";
     import AskDecrypt from "../../components/encryption/AskDecrypt.svelte";
-    import { LazyImage } from 'svelte-lazy-image';
-
     import dataStore from "../../stores/dataStore";
+    import {  Picture } from "svelte-lazy-loader"
 </script>
 
 <main in:fade={{ duration: 500 }}>
@@ -14,11 +13,16 @@
                     <div class="col">
                         <a class="card d-inline-block m-3" href="#/series/{id}">
                             <div class="card">
-                                <LazyImage
-                                    src="images/posters/{poster}"
+                                <!--It is better I guess they at least don't jump around but theres not much in terms of progressive loading in svelte-->
+                                <Picture
                                     class="card-img-top"
                                     alt="..."
-                                />
+                                    placeholder="images/posters/{poster}?w=100&jpg&blur=10"
+                                >
+                                    <source
+                                        data-srcset="images/posters/{poster}?format=webp;avif;jpg&metadata" type="image/jpeg"
+                                    />
+                                </Picture>
                             </div>
                         </a>
                     </div>

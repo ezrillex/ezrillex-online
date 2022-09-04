@@ -1,7 +1,7 @@
 <script>
     import { fade } from "svelte/transition";
-    import { useLazyImage as lazyImage } from "svelte-lazy-image";
     import visitors from "../stores/visitorStore"
+
 
     const percentage = ((26 / 45) * 100).toFixed(1);
     
@@ -17,7 +17,6 @@
                     <img
                         src="./images/PFP.jpeg"
                         alt="Developer"
-                        use:lazyImage
                     />
                 </div>
 
@@ -114,9 +113,9 @@
                 <div class="col col-auto ">
                     <img
                         src="/images/tech-stack-abarca-dev.png"
-                        class="img-fluid"
-                        alt="..."
-                        use:lazyImage
+                        alt="project tech stack"
+                        classes="img-fluid"
+                        loading="lazy"
                     />
                 </div>
 
