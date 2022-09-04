@@ -8,6 +8,12 @@
         <h1>Changelog</h1>
         <br />
 
+        <h4>v0.6.4</h4>
+        <ul>
+            <li>Add visitor count on homepage.</li>
+            <li>Fix minor styling warnings.</li>
+        </ul>
+
         <h4>v0.6.3</h4>
         <ul>
             <li>Add Url shortening service.</li>

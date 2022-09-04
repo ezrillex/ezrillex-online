@@ -13,6 +13,9 @@
 	import Shortener from "./pages/url_shortener/shortener.svelte";
 	import Redirect from "./pages/url_shortener/redirect.svelte";
 
+    import { io } from "socket.io-client";
+	import visitors from "./stores/visitorStore";
+
 	const routes = {
 		"/": Home,
 		"/series": Series,
@@ -24,6 +27,12 @@
 		"/404": NotFoundPage,
 		"*": NotFoundPage,
 	};
+
+	var socket = io("https://abarca.dev/api/v1/");
+
+    socket.on("update", (arg_num) => {
+        $visitors = arg_num
+    });
 </script>
 
 <main>

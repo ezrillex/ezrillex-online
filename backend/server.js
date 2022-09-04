@@ -5,7 +5,14 @@ const cron = require('node-cron');
 const cors = require('cors')
 const app = express();
 
+const http = require('http');
+const server = http.createServer(app);
+const { Server } = require("socket.io");
+const io = new Server(server);
+
 const PORT = process.env.PORT || 8000;
+
+var visitors = 0
 
 var comments = {}
 
@@ -127,6 +134,18 @@ app.post(prefix + '/create_short_url/', async (req, res) => {
     }
 
 })
+
+io.on('connection', (socket) => {
+    visitors++
+    io.emit("update",visitors)
+    //console.log("connected")
+    socket.on('disconnect', () => {
+        visitors--
+        io.emit("update",visitors)
+        //console.log("disconnected")
+
+    });
+});
 //#endregion
 
 async function makesauce() {
@@ -167,6 +186,6 @@ app.get(prefix + '/*', (req, res)=>{
     res.send("Invalid endpoint")
 });
 */
-app.listen(PORT, () => console.log(`Server is running on PORT ${PORT}`));
+server.listen(PORT, () => console.log(`Server is running on PORT ${PORT}`)); // change app to server
 
 

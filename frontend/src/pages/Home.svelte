@@ -1,19 +1,46 @@
 <script>
     import { fade } from "svelte/transition";
-    import { useLazyImage as lazyImage } from 'svelte-lazy-image';
+    import { useLazyImage as lazyImage } from "svelte-lazy-image";
+    import visitors from "../stores/visitorStore"
 
     const percentage = ((26 / 45) * 100).toFixed(1);
-   
+    
 </script>
 
 <main in:fade={{ duration: 500 }}>
-    <div class="container p-5">
+    <div class="container p-5 ">
         <div
-            class="row row-cols-1 row-cols-md-2 justify-content-md-center pb-5"
+            class="row row-cols-1 row-cols-md-2 justify-content-md-center pb-5 "
         >
-            <div class="col col-md-auto ps-0 pe-0">
+            <div class="col col-md-auto ps-0 pe-0 ">
                 <div class="d-flex justify-content-center">
-                    <img src="./images/PFP.jpeg" alt="Developer" use:lazyImage />
+                    <img
+                        src="./images/PFP.jpeg"
+                        alt="Developer"
+                        use:lazyImage
+                    />
+                </div>
+
+                <div class="d-flex justify-content-center align-items-center ">
+                    <svg
+                        version="1.1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 488.85 488.85"
+                        class="h-auto w-2rem"
+                        style="enable-background:new 0 0 488.85 488.85;"
+                        xml:space="preserve"
+                    >
+                        <g>
+                            <path
+                                d="M244.425,98.725c-93.4,0-178.1,51.1-240.6,134.1c-5.1,6.8-5.1,16.3,0,23.1c62.5,83.1,147.2,134.2,240.6,134.2
+                        s178.1-51.1,240.6-134.1c5.1-6.8,5.1-16.3,0-23.1C422.525,149.825,337.825,98.725,244.425,98.725z M251.125,347.025
+                        c-62,3.9-113.2-47.2-109.3-109.3c3.2-51.2,44.7-92.7,95.9-95.9c62-3.9,113.2,47.2,109.3,109.3
+                        C343.725,302.225,302.225,343.725,251.125,347.025z M248.025,299.625c-33.4,2.1-61-25.4-58.8-58.8c1.7-27.6,24.1-49.9,51.7-51.7
+                        c33.4-2.1,61,25.4,58.8,58.8C297.925,275.625,275.525,297.925,248.025,299.625z"
+                            />
+                        </g>
+                    </svg>
+                    <span class="ms-2 fs-4 ">{$visitors}</span>
                 </div>
             </div>
 
@@ -26,17 +53,23 @@
                         <div class="wheel">
                             <p class="text-middle text-center">{percentage}%</p>
 
-                            <div class="the-wheel" >
-
-                            </div>
+                            <div class="the-wheel" />
                         </div>
-                        
                     </div>
                 </div>
                 <div class="row mt-3">
-                    <div class="d-flex flex-row justify-content-evenly align-items-center">
-                        <a href="https://academy.pega.com/verify-certification?fname=Ezra&lname=Abarca" target="_blank">
-                            <img src="/images/pega.png" class="pega" alt="PEGA 8.5 CSA Certification">
+                    <div
+                        class="d-flex flex-row justify-content-evenly align-items-center"
+                    >
+                        <a
+                            href="https://academy.pega.com/verify-certification?fname=Ezra&lname=Abarca"
+                            target="_blank"
+                        >
+                            <img
+                                src="/images/pega.png"
+                                class="pega"
+                                alt="PEGA 8.5 CSA Certification"
+                            />
                         </a>
                         <a
                             href="https://www.linkedin.com/in/ezra-alejandro-abarca-cordova-sv"
@@ -45,9 +78,8 @@
                         >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
-                                width="5rem"
-                                height="auto"
                                 viewBox="0 0 24 24"
+                                class="h-auto w-5rem"
                                 ><path
                                     d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
                                 /></svg
@@ -60,10 +92,8 @@
                         >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
-                                width="5rem"
-                                height="auto"
                                 fill="currentColor"
-                                class="bi bi-github fa-lg"
+                                class="bi bi-github fa-lg h-auto w-5rem"
                                 viewBox="0 0 16 16"
                             >
                                 <path
@@ -75,7 +105,7 @@
                 </div>
             </div>
         </div>
-       
+
         <div class="text-center">
             <h1>~My Projects~</h1>
         </div>
@@ -83,13 +113,13 @@
             <div class="row g-0 justify-content-center">
                 <div class="col col-auto ">
                     <img
-                    src="/images/tech-stack-abarca-dev.png"
-                    class="img-fluid"
-                    alt="..."
-                    use:lazyImage
+                        src="/images/tech-stack-abarca-dev.png"
+                        class="img-fluid"
+                        alt="..."
+                        use:lazyImage
                     />
                 </div>
-                
+
                 <div class="col">
                     <div class="card-body">
                         <h5 class="card-title">ezra.abarca.dev</h5>
@@ -110,10 +140,8 @@
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
-                                    width="3rem"
-                                    height="auto"
                                     fill="currentColor"
-                                    class="bi bi-github fa-lg"
+                                    class="bi bi-github fa-lg h-auto w-3rem"
                                     viewBox="0 0 16 16"
                                 >
                                     <path
@@ -137,6 +165,16 @@
 </main>
 
 <style type="text/postcss">
+    .w-2rem {
+        width: 2rem;
+    }
+    .w-3rem {
+        width: 3rem;
+    }
+    .w-5rem {
+        width: 5rem;
+    }
+
     h1 {
         display: inline;
     }
@@ -149,7 +187,9 @@
     }
 
     .pega {
-        width: 10rem; height: auto; margin: -0.5rem;
+        width: 10rem;
+        height: auto;
+        margin: -0.5rem;
     }
 
     @include media-breakpoint-down(md) {
@@ -157,8 +197,6 @@
             max-width: 100%;
         }
     }
- 
-   
 
     .the-wheel {
         background-color: transparent;
@@ -175,17 +213,14 @@
         clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
     }
 
-   
-    .wheel { 
-        width:100px;
+    .wheel {
+        width: 100px;
         height: 100px;
         position: relative;
     }
 
     .text-middle {
-        position:relative;
+        position: relative;
         top: 37%;
-        
     }
-   
 </style>
