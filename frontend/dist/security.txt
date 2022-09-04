@@ -1,0 +1,1 @@
+Please report any security issues by opening an issue in Github. Thanks!

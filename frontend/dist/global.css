@@ -1,0 +1,13 @@
+.bg-black{
+    background: black;
+}
+
+.white-text {
+    color:white;
+}
+
+.debug {
+    border-style: solid !important; 
+    border-color: red !important;
+    border-width: 3px !important;
+}
