@@ -8,9 +8,7 @@ const app = express();
 const http = require('http');
 const server = http.createServer(app);
 const { Server } = require("socket.io");
-const io = new Server(server, {
-    path: "/api/v1"
-});
+const io = new Server(server)
 
 const PORT = process.env.PORT || 8000;
 
@@ -137,7 +135,7 @@ app.post(prefix + '/create_short_url/', async (req, res) => {
 
 })
 
-io.of("/socket.io").on('connection', (socket) => {
+io.on('connection', (socket) => {
     visitors++
     io.emit("update",visitors)
     //console.log("connected")
