@@ -133,7 +133,7 @@ app.post('/create_short_url/', async (req, res) => {
 
 })
 
-io.on('connection', (socket) => {
+io.of("/socket.io").on('connection', (socket) => {
     visitors++
     io.emit("update",visitors)
     //console.log("connected")
