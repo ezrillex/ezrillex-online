@@ -41,10 +41,6 @@ cron.schedule('*/5 * * * *', (date) => {
 });
 
 
-var prefix = "";
-if (process.env.NODE_ENV !== undefined) {
-    prefix = "/api/v1"
-}
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -52,7 +48,7 @@ app.use(cors()) // enables cors on all origins
 
 //#region endpoints
 app.post(
-    prefix + '/comments/:serie/:episode',
+    '/comments/:serie/:episode',
     (req, res) => {
         var serie = 0;
         var episode = 0;
@@ -72,7 +68,7 @@ app.post(
         res.sendStatus(200)
     });
 
-app.get(prefix + '/comments/:serie/:episode', (req, res) => {
+app.get('/comments/:serie/:episode', (req, res) => {
     var serie = 0;
     var episode = 0;
     try {
@@ -89,7 +85,7 @@ app.get(prefix + '/comments/:serie/:episode', (req, res) => {
     res.send(comments[key] || []);
 });
 
-app.get(prefix + '/link/:sauce', async (req, res) => {
+app.get('/link/:sauce', async (req, res) => {
     let sauce = "";
     try {
         sauce = req.params.sauce;
@@ -112,7 +108,7 @@ app.get(prefix + '/link/:sauce', async (req, res) => {
 
 });
 
-app.post(prefix + '/create_short_url/', async (req, res) => {
+app.post('/create_short_url/', async (req, res) => {
     try {
 
         if (!isValidHttpUrl(req.body.url)) {
