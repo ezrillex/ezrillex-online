@@ -12,7 +12,7 @@ const http = require('http');
 const server = http.createServer(app);
 const { Server } = require("socket.io");
 const io = new Server(server, {
-    path: "/api/v1/",
+    path: "/api/v1/socket.io/",
     port: PORT
 })
 

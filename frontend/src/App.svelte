@@ -29,7 +29,7 @@
 	};
 
 	var socket = io("https://abarca.dev/", {
-		path: "/api/v1/socket.io/",
+		path: "/api/v1/socket.io/socket.io/",
 		port: 8000
 	});
 
