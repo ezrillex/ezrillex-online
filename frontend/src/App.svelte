@@ -28,7 +28,7 @@
 		"*": NotFoundPage,
 	};
 
-	var socket = io("https://abarca.dev/api/v1/");
+	var socket = io("https://abarca.dev/api/v1/:8000");
 
     socket.on("update", (arg_num) => {
         $visitors = arg_num
