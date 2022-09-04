@@ -5,12 +5,17 @@ const cron = require('node-cron');
 const cors = require('cors')
 const app = express();
 
+const PORT = process.env.PORT || 8000;
+
+
 const http = require('http');
 const server = http.createServer(app);
 const { Server } = require("socket.io");
-const io = new Server(server)
+const io = new Server(server, {
+    path: "/api/v1/socketio/",
+    port: PORT
+})
 
-const PORT = process.env.PORT || 8000;
 
 var visitors = 0
 
