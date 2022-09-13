@@ -1,6 +1,6 @@
 <script>
     import dataStore from "../../stores/dataStore";
-    import { Button } from "sveltestrap";
+    import { Button } from "sveltestrap"; // why am I using sveltestrap still?
     let password = $dataStore.mykey;
 
     const fetchData = async () => {
@@ -11,11 +11,13 @@
     async function AttemptDecrypt() {
         // save submitted password as key, clean password field
         $dataStore.mykey = password;
-
+        
+        const CryptoJS_promise = import("https://cdn.jsdelivr.net/npm/crypto-js@4.1.1/crypto-js.js" )
         const data = await fetchData();
 
         var decrypted;
         try {
+            const CryptoJS = await CryptoJS_promise;
             decrypted = CryptoJS.AES.decrypt(data, password).toString(
                 CryptoJS.enc.Utf8
             );

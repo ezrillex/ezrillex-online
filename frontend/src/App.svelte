@@ -1,41 +1,42 @@
 <script>
 	import Router from "svelte-spa-router";
-
-	import Home from "./pages/Home.svelte";
-	import NotFoundPage from "./pages/404.svelte";
-	import Changelog from "./pages/Changelog.svelte";
-	import Series from "./pages/video/Series.svelte";
-	import Serie from "./pages/video/Serie.svelte";
-	import Player from "./pages/video/Player.svelte";
+	import {wrap} from "svelte-spa-router/wrap"
 
 	import Navbar from "./components/layout/navbar.svelte";
 	import Footer from "./components/layout/footer.svelte";
-	import Shortener from "./pages/url_shortener/shortener.svelte";
-	import Redirect from "./pages/url_shortener/redirect.svelte";
-
-    import { io } from "socket.io-client";
+    
 	import visitors from "./stores/visitorStore";
 
 	const routes = {
-		"/": Home,
-		"/series": Series,
-		"/series/:id": Serie,
-		"/series/:id/:order": Player,
-		"/changelog": Changelog,
-		"/shortener": Shortener,
-		"/link/:sauce": Redirect,
-		"/404": NotFoundPage,
-		"*": NotFoundPage,
+		"/": wrap({ asyncComponent: ()=> import("./pages/Home.svelte")}),
+		"/series": wrap({ asyncComponent: () => import("./pages/video/Series.svelte") }),
+		"/series/:id": wrap({ asyncComponent: () => import("./pages/video/Serie.svelte") }),
+		"/series/:id/:order": wrap({ asyncComponent: () => import("./pages/video/Player.svelte") }),
+		"/changelog": wrap({ asyncComponent: () => import("./pages/Changelog.svelte") }),
+		"/shortener": wrap({asyncComponent: ()=> import("./pages/url_shortener/shortener.svelte")}),
+		"/link/:sauce": wrap({asyncComponent: ()=> import("./pages/url_shortener/redirect.svelte")}),
+		"/404": wrap({ asyncComponent: () => import("./pages/404.svelte") }),
+		"*": wrap({ asyncComponent: () => import("./pages/404.svelte") }),
 	};
 
-	var socket = io("https://abarca.dev/", {
-		path: "/api/v1/socket.io/socket.io/",
-		port: 8000
-	});
+	
 
-    socket.on("update", (arg_num) => {
-        $visitors = arg_num
-    });
+	import {onMount} from "svelte"
+
+	let socket;
+
+	onMount(async ()=>{
+		const {io} = await import("socket.io-client");
+
+		socket = io("https://abarca.dev/", {
+			path: "/api/v1/socket.io/socket.io/",
+			port: 8000
+		});
+
+		socket.on("update", (arg_num) => {
+			$visitors = arg_num
+		});
+	})
 </script>
 
 <main>
