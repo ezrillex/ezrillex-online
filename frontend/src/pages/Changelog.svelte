@@ -8,6 +8,12 @@
         <h1>Changelog</h1>
         <br />
 
+        <h4>v0.6.5</h4>
+        <ul>
+            <li>Optimize images.</li>
+            <li>Improved bundle size by implementing dynamic imports.</li>
+        </ul>
+
         <h4>v0.6.4</h4>
         <ul>
             <li>Migrate from rollup to vite.</li>

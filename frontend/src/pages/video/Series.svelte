@@ -1,8 +1,9 @@
 <script>
     import { fade } from "svelte/transition";
-    import AskDecrypt from "../../components/encryption/AskDecrypt.svelte";
     import dataStore from "../../stores/dataStore";
     import {  Picture } from "svelte-lazy-loader"
+    import AskDecrypt from "../../components/encryption/AskDecrypt.svelte";
+  
 </script>
 
 <main in:fade={{ duration: 500 }}>
@@ -29,7 +30,8 @@
                 {/each}
             </div>
         {:else}
-            <AskDecrypt />
+            <AskDecrypt></AskDecrypt>
+            
         {/if}
     </div>
 </main>
