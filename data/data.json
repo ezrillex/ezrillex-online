@@ -6,6 +6,7 @@
             "id": 0,
             "name": "Steins;Gate",
             "poster": "steinsgate.jpg",
+           
             "quote": "El Psy Congroo",
             "author": "Okabe Rintaro",
             "episodes": [
@@ -766,6 +767,7 @@
             "id": 5,
             "name": "Baccano!",
             "poster": "baccano.jpg",
+           
             "quote": "",
             "author": "",
             "episodes": [

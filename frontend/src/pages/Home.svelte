@@ -15,8 +15,10 @@
             <div class="col col-md-auto ps-0 pe-0 ">
                 <div class="d-flex justify-content-center">
                     <img
-                        src="./images/PFP.jpeg"
+                        src="./images/pfp.webp"
                         alt="Developer"
+                        width="490"
+                        height="657"
                     />
                 </div>
 
@@ -65,9 +67,11 @@
                             target="_blank"
                         >
                             <img
-                                src="/images/pega.png"
+                                src="/images/pega.webp"
                                 class="pega"
                                 alt="PEGA 8.5 CSA Certification"
+                                width="973"
+                                height="973"
                             />
                         </a>
                         <a
@@ -112,10 +116,12 @@
             <div class="row g-0 justify-content-center">
                 <div class="col col-auto ">
                     <img
-                        src="/images/tech-stack-abarca-dev.png"
+                        src="/images/tech-stack-abarca-dev.webp"
                         alt="project tech stack"
                         classes="img-fluid"
                         loading="lazy"
+                        width="360"
+                        height="309"
                     />
                 </div>
 
