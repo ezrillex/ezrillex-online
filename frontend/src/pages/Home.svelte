@@ -16,7 +16,7 @@
                 <div class="d-flex justify-content-center">
                     <img
                         src="./images/pfp.webp"
-                        alt="Developer"
+                        alt=""
                         width="490"
                         height="657"
                     />
